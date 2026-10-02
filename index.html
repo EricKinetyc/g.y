@@ -6,8 +6,6 @@
 <title>Eric Kinetyc — Technology · Creativity · Life in Motion</title>
 <meta name="description" content="Eric Kinetyc — technology enthusiast, creator and digital explorer. AI, cybersecurity, web development, cosplay, fitness, swimming, education and digital culture.">
 <meta name="theme-color" content="#06070E">
-<meta property="og:title" content="Eric Kinetyc — KINETYC">
-<meta property="og:description" content="From AI to cosplay, swimming and everyday life.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +13,7 @@
 :root{
   --primary:#4EA8FF;--primary-2:#7C5CFF;--accent:#4DFFC3;--warn:#FF6B6B;
   --radius-sm:10px;--radius:16px;--radius-lg:24px;--radius-xl:32px;
-  --ease:cubic-bezier(.22,1,.36,1);--ease-out:cubic-bezier(.16,1,.3,1);
+  --ease:cubic-bezier(.22,1,.36,1);
   --container:min(100% - 2.5rem, 1320px);
   --font:'Inter',system-ui,-apple-system,sans-serif;
   --font-display:'Sora','Inter',sans-serif;
@@ -53,7 +51,6 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
 ::-webkit-scrollbar{width:10px;height:10px}
 ::-webkit-scrollbar-track{background:var(--bg-2)}
 ::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:6px}
-::-webkit-scrollbar-thumb:hover{background:var(--muted-2)}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:6px}
 
 .bg-orbs{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
@@ -67,7 +64,6 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
 .container{width:var(--container);margin-inline:auto}
 .section{padding:clamp(5rem,9vw,8rem) 0;position:relative}
 .grid{display:grid;gap:1.25rem}
-.grid-2{grid-template-columns:repeat(2,1fr)}
 .grid-3{grid-template-columns:repeat(3,1fr)}
 
 .h-display{font-family:var(--font-display);font-weight:700;line-height:1.03;letter-spacing:-.035em}
@@ -78,21 +74,21 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
 .lede{color:var(--muted);font-size:1.05rem;line-height:1.7;max-width:680px}
 .grad-text{background:linear-gradient(120deg,var(--primary) 0%,var(--primary-2) 55%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.6rem;font-family:var(--font-display);font-weight:600;font-size:.88rem;letter-spacing:-.005em;border-radius:var(--radius-sm);border:1px solid transparent;transition:all .28s var(--ease);white-space:nowrap;cursor:pointer;position:relative;overflow:hidden}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.6rem;font-family:var(--font-display);font-weight:600;font-size:.88rem;border-radius:var(--radius-sm);border:1px solid transparent;transition:all .28s var(--ease);white-space:nowrap;cursor:pointer}
 .btn svg{width:15px;height:15px;flex-shrink:0;transition:transform .3s var(--ease)}
 .btn:hover svg{transform:translateX(3px)}
 .btn--primary{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-2) 100%);color:#fff;box-shadow:0 8px 24px -8px var(--glow-primary)}
 .btn--primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px -8px var(--glow-primary)}
-.btn--glass{background:var(--surface);color:var(--text);border-color:var(--border-2);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btn--glass{background:var(--surface);color:var(--text);border-color:var(--border-2);backdrop-filter:blur(12px)}
 .btn--glass:hover{background:var(--surface-2);transform:translateY(-2px);border-color:var(--primary)}
 .btn--ghost{color:var(--text);border-color:var(--border);background:transparent}
 .btn--ghost:hover{background:var(--surface);border-color:var(--border-2)}
 .btn--sm{padding:.6rem 1rem;font-size:.78rem}
 .btn--block{width:100%}
 
-.navbar{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid var(--border);transition:border-color .4s var(--ease)}
+.navbar{position:sticky;top:0;z-index:80;background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid var(--border)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:72px}
-.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--font-display);font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--font-display);font-weight:700;font-size:1.1rem}
 .brand__mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--primary-2));display:grid;place-items:center;box-shadow:0 6px 16px -4px var(--glow-primary);position:relative;overflow:hidden;flex-shrink:0}
 .brand__mark::before{content:"";position:absolute;inset:2px;background:var(--bg);border-radius:8px}
 .brand__mark::after{content:"";position:absolute;inset:9px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:3px;animation:spin 8s linear infinite}
@@ -101,14 +97,12 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
 .brand__text i{font-style:normal;font-weight:400;color:var(--muted);font-size:.72rem;letter-spacing:.14em;display:block;margin-top:-2px}
 .nav-links{display:flex;align-items:center;gap:.35rem;font-family:var(--font-display);font-size:.86rem;font-weight:500}
 .nav-link{position:relative;padding:.55rem .85rem;border-radius:9px;color:var(--muted);transition:.25s var(--ease)}
-.nav-link:hover{color:var(--text);background:var(--surface)}
-.nav-link.active{color:var(--text);background:var(--surface)}
+.nav-link:hover,.nav-link.active{color:var(--text);background:var(--surface)}
 .nav-actions{display:flex;align-items:center;gap:.5rem}
 .icon-btn{width:40px;height:40px;display:grid;place-items:center;border-radius:10px;color:var(--muted);background:transparent;border:1px solid transparent;transition:.25s var(--ease)}
 .icon-btn:hover{color:var(--text);background:var(--surface);border-color:var(--border)}
 .icon-btn svg{width:18px;height:18px}
-.theme-toggle{position:relative;overflow:hidden}
-.theme-toggle svg{transition:transform .5s var(--ease),opacity .3s}
+.theme-toggle svg{transition:transform .5s var(--ease)}
 html[data-theme="dark"] .sun-icon{display:none}
 html[data-theme="light"] .moon-icon{display:none}
 .menu-btn{display:none}
@@ -134,23 +128,22 @@ html[data-theme="light"] .moon-icon{display:none}
 .hero__visual-inner:hover img{transform:scale(1.04)}
 .hero__visual-inner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.55) 100%)}
 .hero__visual-badge{position:absolute;left:1.2rem;bottom:1.2rem;right:1.2rem;z-index:2;color:#fff}
-.hero__visual-badge .t{font-family:var(--font-display);font-weight:600;font-size:1.15rem;letter-spacing:-.01em;margin-bottom:.25rem}
+.hero__visual-badge .t{font-family:var(--font-display);font-weight:600;font-size:1.15rem;margin-bottom:.25rem}
 .hero__visual-badge .s{font-size:.82rem;color:rgba(255,255,255,.75);display:flex;align-items:center;gap:.5rem}
 .hero__visual-badge .s::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 8px var(--accent)}
 .hero__floaters{position:absolute;inset:0;pointer-events:none}
-.floater{position:absolute;padding:.7rem .9rem;background:var(--surface-2);border:1px solid var(--border-2);border-radius:12px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);box-shadow:var(--shadow);animation:floaty 4s var(--ease) infinite alternate}
+.floater{position:absolute;padding:.7rem .9rem;background:var(--surface-2);border:1px solid var(--border-2);border-radius:12px;backdrop-filter:blur(14px);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);box-shadow:var(--shadow);animation:floaty 4s var(--ease) infinite alternate}
 .floater b{color:var(--accent);font-weight:500}
-.floater-1{top:8%;left:-30px;animation-delay:0s}
+.floater-1{top:8%;left:-30px}
 .floater-2{top:55%;right:-24px;animation-delay:-2s}
 .floater-3{bottom:12%;left:-42px;animation-delay:-1s}
 @keyframes floaty{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
-.scroll-hint{position:absolute;left:50%;bottom:1.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-2);transition:.25s var(--ease)}
-.scroll-hint:hover{color:var(--primary)}
+.scroll-hint{position:absolute;left:50%;bottom:1.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-2)}
 .scroll-hint__line{width:1px;height:44px;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--border-2),transparent)}
 .scroll-hint__line::after{content:"";position:absolute;left:0;top:-44px;width:1px;height:44px;background:var(--primary);animation:scrollDot 2.2s var(--ease) infinite}
 @keyframes scrollDot{0%{top:-44px}60%,100%{top:44px}}
 
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;position:relative}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
 .stat{background:var(--surface);padding:1.6rem 1.4rem;backdrop-filter:blur(16px);transition:.3s var(--ease)}
 .stat:hover{background:var(--surface-2)}
 .stat__n{font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-.03em;line-height:1;background:linear-gradient(120deg,var(--primary),var(--primary-2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:.4rem}
@@ -160,7 +153,21 @@ html[data-theme="light"] .moon-icon{display:none}
 .sec-head__left{max-width:680px}
 .sec-head h2{margin:.85rem 0 0}
 
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);transition:transform .45s var(--ease),border-color .3s var(--ease),box-shadow .45s var(--ease);position:relative;cursor:pointer}
+/* ============ CARD ============ */
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
+  overflow:hidden;display:flex;flex-direction:column;
+  backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);
+  transition:transform .45s var(--ease),border-color .3s var(--ease),box-shadow .45s var(--ease),opacity .5s var(--ease);
+  position:relative;cursor:pointer;
+  /* CRITICAL FIX: no reveal class; always visible by default */
+  opacity:1;
+  animation:cardEnter .55s var(--ease) both;
+}
+@keyframes cardEnter{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
 .card:hover{transform:translateY(-6px);border-color:var(--border-2);box-shadow:var(--shadow)}
 .card__media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--bg-2)}
 .card__media img,.card__media video{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
@@ -187,21 +194,50 @@ html[data-theme="light"] .moon-icon{display:none}
 .card__cta:hover{gap:.65rem}
 .card__cta svg{width:12px;height:12px}
 
+/* ============ FILTER TABS ============ */
 .filter-bar{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;justify-content:space-between;margin-bottom:2rem}
-.tabs{display:flex;flex-wrap:wrap;gap:.4rem;padding:.35rem;background:var(--surface);border:1px solid var(--border);border-radius:999px;backdrop-filter:blur(12px)}
-.tab{padding:.55rem 1rem;font-family:var(--font-display);font-weight:500;font-size:.82rem;color:var(--muted);border-radius:999px;transition:.25s var(--ease);white-space:nowrap;display:inline-flex;align-items:center;gap:.45rem;cursor:pointer;background:none;border:0}
+.tabs{
+  display:inline-flex;align-items:center;gap:.35rem;
+  padding:.4rem;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:999px;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:var(--shadow-sm);
+}
+.tab{
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.6rem 1.1rem;
+  font-family:var(--font-display);font-weight:500;font-size:.84rem;
+  color:var(--muted);
+  border-radius:999px;
+  transition:color .25s var(--ease),background .25s var(--ease);
+  white-space:nowrap;
+  cursor:pointer;background:none;border:0;
+  position:relative;
+}
 .tab:hover{color:var(--text)}
-.tab.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 4px 12px -2px var(--glow-primary)}
+.tab.active{
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;
+  box-shadow:0 6px 16px -4px var(--glow-primary),0 0 0 1px rgba(255,255,255,.05) inset;
+}
 .tab__count{
   display:inline-grid;place-items:center;
-  min-width:22px;height:20px;padding:0 .4rem;
-  background:rgba(255,255,255,.12);
+  min-width:20px;height:20px;padding:0 .35rem;
+  background:rgba(255,255,255,.08);
+  color:var(--muted-2);
   border-radius:999px;
-  font-family:var(--font-mono);font-size:.66rem;font-weight:500;
-  letter-spacing:0;
+  font-family:var(--font-mono);font-size:.64rem;font-weight:500;
+  letter-spacing:0;line-height:1;
+  transition:.25s var(--ease);
 }
-.tab.active .tab__count{background:rgba(255,255,255,.28);color:#fff}
-html[data-theme="light"] .tab__count{background:rgba(10,12,24,.08);color:var(--muted)}
+.tab.active .tab__count{
+  background:rgba(255,255,255,.25);
+  color:#fff;
+}
+html[data-theme="light"] .tab__count{background:rgba(10,12,24,.06);color:var(--muted)}
 html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35);color:#fff}
 
 .search-inline{display:flex;align-items:center;gap:.6rem;padding:.55rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:999px;min-width:240px;transition:.25s var(--ease)}
@@ -211,20 +247,18 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .search-inline input::placeholder{color:var(--muted-2)}
 
 .topics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.topic{position:relative;padding:1.6rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:.35s var(--ease);cursor:help;overflow:visible}
+.topic{position:relative;padding:1.6rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);backdrop-filter:blur(16px);transition:.35s var(--ease);cursor:help;overflow:visible}
 .topic:hover{border-color:var(--primary);transform:translateY(-6px);box-shadow:var(--shadow-lg);z-index:5}
 .topic__head{display:flex;align-items:center;gap:.75rem;margin-bottom:.55rem}
 .topic__icon{width:38px;height:38px;flex-shrink:0;background:var(--surface-2);border:1px solid var(--border);border-radius:11px;display:grid;place-items:center;font-size:1.15rem;transition:.35s var(--ease)}
 .topic:hover .topic__icon{background:linear-gradient(135deg,var(--primary),var(--primary-2));border-color:transparent;transform:scale(1.08) rotate(-4deg)}
-.topic__name{font-family:var(--font-display);font-weight:600;font-size:1.02rem;letter-spacing:-.01em;color:var(--text)}
+.topic__name{font-family:var(--font-display);font-weight:600;font-size:1.02rem;color:var(--text)}
 .topic__hint{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);display:inline-flex;align-items:center;gap:.35rem}
 .topic__hint::after{content:"?";display:inline-grid;place-items:center;width:14px;height:14px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border);font-size:.6rem;font-weight:700}
-.topic__tip{position:absolute;left:50%;bottom:calc(100% + 12px);transform:translateX(-50%) translateY(6px);width:min(340px,88vw);padding:1.1rem 1.15rem;background:var(--surface-solid);border:1px solid var(--border-2);border-radius:var(--radius);box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;pointer-events:none;transition:.3s var(--ease);z-index:20;text-align:left}
+.topic__tip{position:absolute;left:50%;bottom:calc(100% + 12px);transform:translateX(-50%) translateY(6px);width:min(340px,88vw);padding:1.1rem 1.15rem;background:var(--surface-solid);border:1px solid var(--border-2);border-radius:var(--radius);box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;pointer-events:none;transition:.3s var(--ease);z-index:20}
 .topic__tip::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:var(--surface-solid)}
 .topic__tip-head{display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);font-weight:600;font-size:.92rem;color:var(--text);margin-bottom:.55rem}
-.topic__tip-head span{font-size:1.05rem}
-.topic__tip-body{font-family:var(--font);font-size:.86rem;line-height:1.65;color:var(--muted)}
-.topic__tip-body b{color:var(--primary);font-weight:600}
+.topic__tip-body{font-size:.86rem;line-height:1.65;color:var(--muted)}
 .topic:hover .topic__tip{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
 
 .project{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;backdrop-filter:blur(16px);transition:.45s var(--ease);display:grid;grid-template-columns:1.2fr 1fr;cursor:pointer}
@@ -238,7 +272,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .project__body h3{font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,2vw,1.7rem);letter-spacing:-.025em;line-height:1.15;margin-bottom:.9rem}
 .project__body p{color:var(--muted);font-size:.94rem;line-height:1.7;margin-bottom:1.5rem}
 .tech-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem}
-.tech-tag{padding:.35rem .7rem;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);border-radius:8px}
+.tech-tag{padding:.35rem .7rem;font-family:var(--font-mono);font-size:.68rem;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);border-radius:8px}
 
 .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem}
 .soc{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);backdrop-filter:blur(14px);transition:.3s var(--ease);position:relative;overflow:hidden}
@@ -286,77 +320,35 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .field textarea{min-height:130px;resize:vertical}
 .field input:focus,.field textarea:focus,.field select:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--glow-primary);background:var(--surface-2)}
 .field.error input,.field.error textarea,.field.error select{border-color:var(--warn)}
-.field__err{display:none;font-size:.74rem;color:var(--warn);margin-top:.35rem;font-family:var(--font-mono);letter-spacing:.03em}
+.field__err{display:none;font-size:.74rem;color:var(--warn);margin-top:.35rem;font-family:var(--font-mono)}
 .field.error .field__err{display:block}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-card{padding:clamp(1.5rem,3vw,2.4rem);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);backdrop-filter:blur(16px)}
 
-.footer{background:var(--bg-2);border-top:1px solid var(--border);padding:clamp(3.5rem,7vw,5.5rem) 0 2rem;margin-top:4rem;position:relative}
+.footer{background:var(--bg-2);border-top:1px solid var(--border);padding:clamp(3.5rem,7vw,5.5rem) 0 2rem;margin-top:4rem}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
 .footer-brand p{color:var(--muted);font-size:.9rem;line-height:1.75;margin:1.2rem 0 1.4rem;max-width:320px}
-.footer-col h5{font-family:var(--font-display);font-size:.82rem;letter-spacing:.06em;font-weight:600;color:var(--text);margin-bottom:1.2rem}
+.footer-col h5{font-family:var(--font-display);font-size:.82rem;font-weight:600;color:var(--text);margin-bottom:1.2rem}
 .footer-col a{display:block;padding:.35rem 0;font-size:.88rem;color:var(--muted);transition:.22s var(--ease)}
 .footer-col a:hover{color:var(--primary);transform:translateX(3px)}
 .footer-mini-socials{display:flex;gap:.5rem;margin-top:1.4rem;flex-wrap:wrap}
 .footer-mini-socials a{width:36px;height:36px;display:grid;place-items:center;background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--muted);transition:.22s var(--ease)}
-.footer-mini-socials a:hover{color:var(--primary);border-color:var(--primary);background:var(--surface-2);transform:translateY(-2px)}
+.footer-mini-socials a:hover{color:var(--primary);border-color:var(--primary);transform:translateY(-2px)}
 .footer-mini-socials svg{width:15px;height:15px}
-.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:2rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted-2)}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:2rem;font-family:var(--font-mono);font-size:.72rem;color:var(--muted-2)}
 .footer-bottom__links{display:flex;gap:1.2rem;flex-wrap:wrap}
 .footer-bottom__links a:hover{color:var(--primary)}
 
-/* Modal — updated: no backdrop close, only X button and ESC */
-.modal-overlay{
-  position:fixed;inset:0;z-index:170;
-  background:rgba(0,0,0,.75);
-  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
-  opacity:0;visibility:hidden;
-  transition:.35s var(--ease);
-  overflow-y:auto;padding:2rem 1rem;
-  /* no pointer events when closed */
-  pointer-events:none;
-}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:170;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:.35s var(--ease);overflow-y:auto;padding:2rem 1rem;pointer-events:none}
 .modal-overlay.on{opacity:1;visibility:visible;pointer-events:auto}
-.modal{
-  max-width:880px;margin:auto;
-  background:var(--surface-solid);
-  border:1px solid var(--border-2);
-  border-radius:var(--radius-xl);
-  overflow:hidden;
-  transform:translateY(20px) scale(.98);
-  transition:.5s var(--ease);
-  position:relative;
-}
+.modal{max-width:880px;margin:auto;background:var(--surface-solid);border:1px solid var(--border-2);border-radius:var(--radius-xl);overflow:hidden;transform:translateY(20px) scale(.98);transition:.5s var(--ease);position:relative}
 .modal-overlay.on .modal{transform:none}
-.modal__close{
-  position:absolute;top:1rem;right:1rem;z-index:10;
-  width:42px;height:42px;border-radius:50%;
-  background:rgba(0,0,0,.72);
-  border:1px solid rgba(255,255,255,.25);
-  color:#fff;display:grid;place-items:center;
-  cursor:pointer;transition:.25s var(--ease);
-  backdrop-filter:blur(10px);
-  box-shadow:0 6px 20px rgba(0,0,0,.4);
-}
+.modal__close{position:absolute;top:1rem;right:1rem;z-index:10;width:42px;height:42px;border-radius:50%;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.25);color:#fff;display:grid;place-items:center;cursor:pointer;transition:.25s var(--ease);backdrop-filter:blur(10px);box-shadow:0 6px 20px rgba(0,0,0,.4)}
 .modal__close:hover{background:var(--warn);border-color:var(--warn);transform:rotate(90deg) scale(1.05)}
 .modal__close svg{width:17px;height:17px}
-.modal__hint{
-  position:absolute;top:1rem;left:1rem;z-index:10;
-  padding:.5rem .85rem;
-  background:rgba(0,0,0,.72);
-  border:1px solid rgba(255,255,255,.18);
-  color:#fff;border-radius:999px;
-  font-family:var(--font-mono);font-size:.62rem;
-  letter-spacing:.14em;text-transform:uppercase;
-  backdrop-filter:blur(10px);
-  pointer-events:none;
-}
-.modal__hint kbd{
-  display:inline-block;padding:.1rem .4rem;
-  background:rgba(255,255,255,.15);border-radius:4px;
-  font-family:var(--font-mono);font-size:.62rem;
-  margin:0 .15rem;
-}
+.modal__hint{position:absolute;top:1rem;left:1rem;z-index:10;padding:.5rem .85rem;background:rgba(0,0,0,.72);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:999px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;backdrop-filter:blur(10px);pointer-events:none}
+.modal__hint kbd{display:inline-block;padding:.1rem .4rem;background:rgba(255,255,255,.15);border-radius:4px;font-family:var(--font-mono);font-size:.62rem;margin:0 .15rem}
 .modal__hero{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--bg-2)}
 .modal__hero img{width:100%;height:100%;object-fit:cover}
 .modal__hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85))}
@@ -366,17 +358,14 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .modal__body{padding:clamp(1.5rem,3vw,2.5rem)}
 .modal__eyebrow{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--primary);margin-bottom:.75rem;display:block}
 .modal__body p{color:var(--text-2);font-size:1rem;line-height:1.8;margin-bottom:1.15rem}
-.modal__body h3{font-family:var(--font-display);font-weight:600;font-size:1.15rem;letter-spacing:-.015em;margin:1.75rem 0 .85rem;color:var(--text)}
-.modal__body ul{margin:0 0 1.4rem;display:flex;flex-direction:column;gap:.6rem}
-.modal__body li{display:flex;align-items:flex-start;gap:.75rem;color:var(--text-2);font-size:.94rem;line-height:1.65}
-.modal__body li::before{content:"◆";color:var(--primary);font-size:.65rem;flex-shrink:0;margin-top:.4rem}
+.modal__body h3{font-family:var(--font-display);font-weight:600;font-size:1.15rem;margin:1.75rem 0 .85rem;color:var(--text)}
 .modal__tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid var(--border)}
-.modal__tag{padding:.4rem .8rem;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.06em;background:var(--surface-2);border:1px solid var(--border);color:var(--muted);border-radius:999px}
+.modal__tag{padding:.4rem .8rem;font-family:var(--font-mono);font-size:.68rem;background:var(--surface-2);border:1px solid var(--border);color:var(--muted);border-radius:999px}
 .modal__actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--border)}
 
 .drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);z-index:150;opacity:0;visibility:hidden;transition:.35s var(--ease)}
 .drawer-overlay.on{opacity:1;visibility:visible}
-.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--bg-2);border-left:1px solid var(--border);z-index:151;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s var(--ease);box-shadow:-30px 0 80px -30px rgba(0,0,0,.6)}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--bg-2);border-left:1px solid var(--border);z-index:151;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .5s var(--ease)}
 .drawer.on{transform:translateX(0)}
 .drawer__head{padding:1.15rem 1.4rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-shrink:0}
 .drawer__title{font-family:var(--font-display);font-weight:700;font-size:1.1rem}
@@ -387,7 +376,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .drawer__close svg{width:16px;height:16px}
 .drawer__tabs{display:flex;gap:.35rem;padding:1rem 1.4rem 0;border-bottom:1px solid var(--border);overflow-x:auto;flex-shrink:0;scrollbar-width:none}
 .drawer__tabs::-webkit-scrollbar{display:none}
-.drawer__tab{padding:.7rem 1rem;font-family:var(--font-display);font-weight:500;font-size:.82rem;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:.25s var(--ease);background:none;border-left:0;border-right:0;border-top:0;cursor:pointer}
+.drawer__tab{padding:.7rem 1rem;font-family:var(--font-display);font-weight:500;font-size:.82rem;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:.25s var(--ease);background:none;cursor:pointer}
 .drawer__tab:hover{color:var(--text)}
 .drawer__tab.on{color:var(--text);border-color:var(--primary)}
 .drawer__body{padding:1.4rem;overflow-y:auto;flex:1}
@@ -396,7 +385,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .admin-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem;margin-bottom:1.4rem}
 .admin-stat{padding:1rem 1.15rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)}
-.admin-stat__n{font-family:var(--font-display);font-weight:700;font-size:1.6rem;letter-spacing:-.02em;line-height:1;color:var(--text);margin-bottom:.35rem}
+.admin-stat__n{font-family:var(--font-display);font-weight:700;font-size:1.6rem;line-height:1;color:var(--text);margin-bottom:.35rem}
 .admin-stat__l{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .admin-form{display:flex;flex-direction:column;gap:1rem}
 .admin-form__grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
@@ -408,26 +397,26 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .dropzone__s{font-size:.8rem;color:var(--muted)}
 .file-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:.5rem;margin-top:1rem}
 .file-item{position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--surface-2);border:1px solid var(--border)}
-.file-item img,.file-item video{width:100%;height:100%;object-fit:cover}
+.file-item img{width:100%;height:100%;object-fit:cover}
 .file-item__x{position:absolute;top:4px;right:4px;width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;display:grid;place-items:center;font-size:.75rem;cursor:pointer;border:0}
-.status{padding:.9rem 1.1rem;border-radius:10px;font-size:.85rem;margin-top:.85rem;display:none;font-family:var(--font-mono);letter-spacing:.02em}
+.status{padding:.9rem 1.1rem;border-radius:10px;font-size:.85rem;margin-top:.85rem;display:none;font-family:var(--font-mono)}
 .status.ok{display:block;background:rgba(77,255,195,.10);border:1px solid rgba(77,255,195,.35);color:var(--accent)}
 .status.err{display:block;background:rgba(255,107,107,.10);border:1px solid rgba(255,107,107,.35);color:var(--warn)}
 .admin-list{display:flex;flex-direction:column;gap:.6rem}
-.admin-item{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;transition:.22s var(--ease)}
+.admin-item{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px}
 .admin-item:hover{border-color:var(--border-2);background:var(--surface-2)}
 .admin-item__info{min-width:0;flex:1}
 .admin-item__t{font-family:var(--font-display);font-weight:600;font-size:.9rem;margin-bottom:.2rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .admin-item__m{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .admin-item__actions{display:flex;gap:.35rem;flex-shrink:0}
 .admin-item__btn{width:32px;height:32px;border-radius:8px;background:transparent;border:1px solid var(--border);color:var(--muted);display:grid;place-items:center;transition:.22s var(--ease)}
-.admin-item__btn:hover{color:var(--text);border-color:var(--border-2);background:var(--surface-2)}
+.admin-item__btn:hover{color:var(--text);border-color:var(--border-2)}
 .admin-item__btn.danger:hover{color:var(--warn);border-color:var(--warn)}
 .admin-item__btn svg{width:14px;height:14px}
 .social-input{display:flex;flex-direction:column;gap:.35rem;padding:.85rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:.6rem}
 .social-input__label{display:flex;align-items:center;gap:.5rem;font-family:var(--font-display);font-weight:600;font-size:.82rem}
 .social-input__label svg{width:15px;height:15px;color:var(--primary)}
-.social-input input{padding:.55rem .8rem;background:var(--bg-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.84rem;outline:none;transition:.2s;font-family:var(--font-mono)}
+.social-input input{padding:.55rem .8rem;background:var(--bg-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.84rem;outline:none;font-family:var(--font-mono)}
 .social-input input:focus{border-color:var(--primary)}
 
 .search-overlay{position:fixed;inset:0;z-index:160;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(20px);opacity:0;visibility:hidden;transition:.35s var(--ease);padding:6rem 1.5rem 2rem;overflow-y:auto}
@@ -437,7 +426,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .search-box__input{display:flex;align-items:center;gap:.9rem;padding:1.1rem 1.4rem;background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius-lg);box-shadow:var(--shadow-lg)}
 .search-box__input svg{width:22px;height:22px;color:var(--primary);flex-shrink:0}
 .search-box__input input{background:transparent;border:0;outline:none;font-family:var(--font-display);font-weight:500;font-size:1.15rem;color:var(--text);width:100%}
-.search-box__hint{margin-top:1rem;padding:0 .5rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;color:var(--muted)}
+.search-box__hint{margin-top:1rem;padding:0 .5rem;font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
 .search-results{margin-top:1.5rem;display:flex;flex-direction:column;gap:.5rem}
 .search-result{padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border);border-radius:12px;display:flex;gap:1rem;align-items:center;transition:.2s var(--ease);cursor:pointer}
 .search-result:hover{border-color:var(--primary);background:var(--surface-2);transform:translateX(4px)}
@@ -447,32 +436,19 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .search-result__title{font-family:var(--font-display);font-weight:600;font-size:.95rem;margin-bottom:.2rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .search-result__meta{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
-.toast{position:fixed;bottom:1.75rem;left:50%;transform:translateX(-50%) translateY(120px);padding:.95rem 1.4rem;background:var(--surface-solid);border:1px solid var(--border-2);border-left:3px solid var(--accent);border-radius:12px;box-shadow:var(--shadow-lg);font-family:var(--font-mono);font-size:.82rem;letter-spacing:.02em;z-index:200;opacity:0;transition:.4s var(--ease);backdrop-filter:blur(16px);max-width:calc(100vw - 2rem)}
+.toast{position:fixed;bottom:1.75rem;left:50%;transform:translateX(-50%) translateY(120px);padding:.95rem 1.4rem;background:var(--surface-solid);border:1px solid var(--border-2);border-left:3px solid var(--accent);border-radius:12px;box-shadow:var(--shadow-lg);font-family:var(--font-mono);font-size:.82rem;z-index:200;opacity:0;transition:.4s var(--ease);backdrop-filter:blur(16px);max-width:calc(100vw - 2rem)}
 .toast.on{transform:translateX(-50%) translateY(0);opacity:1}
 .toast.err{border-left-color:var(--warn)}
 
+/* Only for static top-of-page reveal (hero, section heads) */
 .rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
 .rv.on{opacity:1;transform:none}
 
-.empty-state{
-  grid-column:1/-1;text-align:center;padding:3.5rem 1.5rem;
-  color:var(--muted);border:1px dashed var(--border);border-radius:16px;
-  background:var(--surface);
-}
+.empty-state{grid-column:1/-1;text-align:center;padding:3.5rem 1.5rem;color:var(--muted);border:1px dashed var(--border);border-radius:16px;background:var(--surface)}
 .empty-state__ico{font-size:2rem;margin-bottom:.75rem;opacity:.5;display:block}
-.empty-state h4{
-  font-family:var(--font-display);font-weight:600;font-size:1.05rem;
-  color:var(--text);margin-bottom:.45rem;
-}
+.empty-state h4{font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text);margin-bottom:.45rem}
 .empty-state p{font-size:.9rem;margin-bottom:1.15rem;max-width:400px;margin-inline:auto}
-.empty-state__btn{
-  display:inline-flex;align-items:center;gap:.4rem;
-  padding:.55rem 1.1rem;
-  background:var(--surface-2);border:1px solid var(--border-2);
-  border-radius:10px;color:var(--text);font-family:var(--font-display);
-  font-weight:500;font-size:.82rem;cursor:pointer;
-  transition:.25s var(--ease);
-}
+.empty-state__btn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;color:var(--text);font-family:var(--font-display);font-weight:500;font-size:.82rem;cursor:pointer;transition:.25s var(--ease)}
 .empty-state__btn:hover{border-color:var(--primary);background:var(--surface)}
 
 @media (max-width:1100px){
@@ -495,7 +471,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 @media (max-width:720px){
   :root{--container:min(100% - 2rem, 1320px)}
   .section{padding:4rem 0}
-  .grid-2,.grid-3{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr;gap:1px}
   .social-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
@@ -509,7 +485,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   .sec-head{flex-direction:column;align-items:flex-start}
   .filter-bar{flex-direction:column;align-items:stretch}
   .search-inline{min-width:0;width:100%}
-  .tabs{width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+  .tabs{width:100%;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;padding:.35rem}
   .tabs::-webkit-scrollbar{display:none}
   .floater-1,.floater-2,.floater-3{display:none}
   .scroll-hint{display:none}
@@ -520,8 +496,9 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   .modal__hint{display:none}
 }
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
   .rv{opacity:1;transform:none}
+  .card{animation:none}
   html{scroll-behavior:auto}
 }
 </style>
@@ -538,12 +515,8 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   <div class="container nav-inner">
     <a href="#top" class="brand">
       <span class="brand__mark"></span>
-      <span class="brand__text">
-        <b>KINETYC</b>
-        <i>ERIC KINETYC</i>
-      </span>
+      <span class="brand__text"><b>KINETYC</b><i>ERIC KINETYC</i></span>
     </a>
-
     <nav class="nav-links">
       <a class="nav-link active" href="#top" data-nav="top">Home</a>
       <a class="nav-link" href="#about" data-nav="about">About</a>
@@ -552,21 +525,14 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       <a class="nav-link" href="#projects" data-nav="projects">Projects</a>
       <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
     </nav>
-
     <div class="nav-actions">
-      <button class="icon-btn" id="searchBtn" aria-label="Search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      </button>
-      <button class="icon-btn theme-toggle" id="themeBtn" aria-label="Toggle theme">
+      <button class="icon-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+      <button class="icon-btn theme-toggle" id="themeBtn" aria-label="Theme">
         <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
-      <button class="icon-btn" id="adminBtn" aria-label="Creator Studio">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg>
-      </button>
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
+      <button class="icon-btn" id="adminBtn" aria-label="Studio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/></svg></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
     </div>
   </div>
 </header>
@@ -577,33 +543,22 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   <div class="container">
     <div class="hero-grid">
       <div class="hero__content">
-        <span class="hero__badge">
-          <span class="pulse"></span>
-          Live from Guyana · Available for collaborations
-        </span>
+        <span class="hero__badge"><span class="pulse"></span>Live from Guyana · Available for collaborations</span>
         <h1 class="h-display h-1">
           <span>Technology.</span>
           <span class="grad-text">Creativity.</span>
           <span>Life in motion.</span>
         </h1>
-        <p class="hero__desc">
-          I'm Eric Kinetyc — <b>technology enthusiast</b>, creator and digital explorer sharing the things I discover, create and experience. From AI and to cosplay, swimming and everyday life.
-        </p>
+        <p class="hero__desc">I'm Eric Kinetyc — <b>technology enthusiast</b>, creator and digital explorer sharing the things I discover, create and experience. From AI and to cosplay, swimming and everyday life.</p>
         <div class="hero__cta">
-          <a href="#content" class="btn btn--primary">
-            Explore content
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="btn btn--glass">
-            Watch on YouTube
-          </a>
+          <a href="#content" class="btn btn--primary">Explore content <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="btn btn--glass">Watch on YouTube</a>
         </div>
         <div class="hero__social" id="heroSocial"></div>
       </div>
-
       <div class="hero__visual">
         <div class="hero__visual-inner">
-          <img src="https://i.imgur.com/LfIjuKg.png" alt="Cyberpunk Samurai — 1st Place Guyana Game Fest 2026">
+          <img src="https://i.imgur.com/LfIjuKg.png" alt="Cyberpunk Samurai">
           <div class="hero__visual-badge">
             <div class="t">Cyberpunk Samurai</div>
             <div class="s">1st Place · Guyana Game Fest 2026</div>
@@ -617,10 +572,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       </div>
     </div>
   </div>
-  <a href="#stats" class="scroll-hint" aria-label="Scroll down">
-    <span>Scroll</span>
-    <span class="scroll-hint__line"></span>
-  </a>
+  <a href="#stats" class="scroll-hint" aria-label="Scroll"><span>Scroll</span><span class="scroll-hint__line"></span></a>
 </section>
 
 <section id="stats" class="section" style="padding-top:0">
@@ -638,18 +590,14 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   <div class="container">
     <div class="about-grid">
       <div class="about__img rv">
-        <img src="https://i.imgur.com/iScwDxN.png" alt="Eric Kinetyc — Creator and digital explorer">
+        <img src="https://i.imgur.com/iScwDxN.png" alt="Eric Kinetyc">
         <div class="about__img-tag">Eric Kinetyc · Creator</div>
       </div>
       <div class="about__body rv" style="--d:.1s">
         <span class="eyebrow">About</span>
         <h2 class="h-2" style="margin:.85rem 0 1.4rem">A creator at the intersection of <span class="grad-text">technology, creativity</span> and everyday life.</h2>
-        <p>
-          I'm a Guyanese <b>technology enthusiast</b>, creator and digital explorer. My work moves between two worlds: the <b>technical</b> and the <b>expressive</b>. One day I'm writing about AI and cybersecurity, the next I'm in full cosplay armor on a competition stage, and the day after I'm underwater in a pool at sunrise.
-        </p>
-        <p>
-          KINETYC is where all of it lives. Not a niche. Not a single-topic brand. A living record of a creator in motion — <b>documenting the things I discover, create and experience</b>.
-        </p>
+        <p>I'm a Guyanese <b>technology enthusiast</b>, creator and digital explorer. My work moves between two worlds: the <b>technical</b> and the <b>expressive</b>. One day I'm writing about AI and cybersecurity, the next I'm in full cosplay armor on a competition stage, and the day after I'm underwater in a pool at sunrise.</p>
+        <p>KINETYC is where all of it lives. Not a niche. Not a single-topic brand. A living record of a creator in motion — <b>documenting the things I discover, create and experience</b>.</p>
       </div>
     </div>
   </div>
@@ -675,10 +623,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
         <span class="eyebrow">Latest · Featured</span>
         <h2 class="h-2">Featured <span class="grad-text">content</span></h2>
       </div>
-      <a href="#media" class="btn btn--glass btn--sm">
-        View all content
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <a href="#media" class="btn btn--glass btn--sm">View all content <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
     <div class="grid grid-3" id="featuredGrid"></div>
   </div>
@@ -695,12 +640,12 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
     </div>
 
     <div class="filter-bar rv">
-      <div class="tabs" id="filterTabs">
-        <button class="tab active" data-filter="all" type="button">All <span class="tab__count" data-count-for="all">0</span></button>
-        <button class="tab" data-filter="article" type="button">Articles <span class="tab__count" data-count-for="article">0</span></button>
-        <button class="tab" data-filter="video" type="button">Videos <span class="tab__count" data-count-for="video">0</span></button>
-        <button class="tab" data-filter="photo" type="button">Photos <span class="tab__count" data-count-for="photo">0</span></button>
-        <button class="tab" data-filter="audio" type="button">Audio <span class="tab__count" data-count-for="audio">0</span></button>
+      <div class="tabs" id="filterTabs" role="tablist" aria-label="Filter content">
+        <button class="tab active" data-filter="all" type="button" role="tab" aria-selected="true">All <span class="tab__count" data-count-for="all">0</span></button>
+        <button class="tab" data-filter="article" type="button" role="tab" aria-selected="false">Articles <span class="tab__count" data-count-for="article">0</span></button>
+        <button class="tab" data-filter="video" type="button" role="tab" aria-selected="false">Videos <span class="tab__count" data-count-for="video">0</span></button>
+        <button class="tab" data-filter="photo" type="button" role="tab" aria-selected="false">Photos <span class="tab__count" data-count-for="photo">0</span></button>
+        <button class="tab" data-filter="audio" type="button" role="tab" aria-selected="false">Audio <span class="tab__count" data-count-for="audio">0</span></button>
       </div>
       <div class="search-inline">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
@@ -744,10 +689,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       <h2>Enjoy the content?</h2>
       <p>If you enjoy what I'm building, the easiest way to support is to follow, subscribe, like, comment and share. You can also support directly through PayPal.</p>
       <div class="cta-actions">
-        <a href="https://paypal.me/EricHodge347" target="_blank" rel="noopener" class="btn btn--primary">
-          Support via PayPal
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
+        <a href="https://paypal.me/EricHodge347" target="_blank" rel="noopener" class="btn btn--primary">Support via PayPal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#social" class="btn btn--glass">Follow Eric Kinetyc</a>
       </div>
     </div>
@@ -763,7 +705,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
         <p class="lede" style="margin-top:1rem">Business, collaboration, media, or just a hello — reach out and I'll get back to you.</p>
       </div>
     </div>
-
     <div class="contact-grid">
       <aside class="contact-info rv">
         <div class="contact-info__item">
@@ -771,55 +712,29 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
           <div><h4>Email</h4><a href="mailto:erichodge978@gmail.com">erichodge978@gmail.com</a></div>
         </div>
         <div class="contact-info__item">
-          <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-5 7-11a7 7 0 1 0-14 0c0 6 7 11 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+          <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-5 7-11a7 7 0 1 0-14 0c0 6 7 11 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
           <div><h4>Based in</h4><p>Guyana · Creating worldwide</p></div>
         </div>
         <div class="contact-info__item">
-          <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
           <div><h4>Response time</h4><p>Usually within 24–48 hours</p></div>
         </div>
         <div class="contact-info__item">
-          <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+          <div class="contact-info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
           <div><h4>Open to</h4><p>Collabs · Brand partnerships · Media</p></div>
         </div>
       </aside>
-
       <div class="form-card rv" style="--d:.1s">
         <form class="form" id="contactForm" novalidate>
           <div class="form-row">
-            <div class="field">
-              <label for="cName">Name</label>
-              <input type="text" id="cName" placeholder="Your name">
-              <span class="field__err">Please enter your name.</span>
-            </div>
-            <div class="field">
-              <label for="cEmail">Email</label>
-              <input type="email" id="cEmail" placeholder="you@email.com">
-              <span class="field__err">Please enter a valid email.</span>
-            </div>
+            <div class="field"><label for="cName">Name</label><input type="text" id="cName" placeholder="Your name"><span class="field__err">Please enter your name.</span></div>
+            <div class="field"><label for="cEmail">Email</label><input type="email" id="cEmail" placeholder="you@email.com"><span class="field__err">Please enter a valid email.</span></div>
           </div>
-          <div class="field">
-            <label for="cSubject">Subject</label>
-            <select id="cSubject">
-              <option>General</option>
-              <option>Business</option>
-              <option>Collaboration</option>
-              <option>Brand partnership</option>
-              <option>Technology project</option>
-              <option>Media</option>
-              <option>Cosplay</option>
-              <option>Other</option>
-            </select>
+          <div class="field"><label for="cSubject">Subject</label>
+            <select id="cSubject"><option>General</option><option>Business</option><option>Collaboration</option><option>Brand partnership</option><option>Technology project</option><option>Media</option><option>Cosplay</option><option>Other</option></select>
           </div>
-          <div class="field">
-            <label for="cMsg">Message</label>
-            <textarea id="cMsg" placeholder="Tell me what's on your mind…"></textarea>
-            <span class="field__err">Please enter a short message.</span>
-          </div>
-          <button type="submit" class="btn btn--primary btn--block">
-            Send message
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </button>
+          <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" placeholder="Tell me what's on your mind…"></textarea><span class="field__err">Please enter a short message.</span></div>
+          <button type="submit" class="btn btn--primary btn--block">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <div class="status" id="contactStatus"></div>
         </form>
       </div>
@@ -833,64 +748,28 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="brand">
-          <span class="brand__mark"></span>
-          <span class="brand__text">
-            <b>KINETYC</b>
-            <i>ERIC KINETYC</i>
-          </span>
-        </a>
+        <a href="#top" class="brand"><span class="brand__mark"></span><span class="brand__text"><b>KINETYC</b><i>ERIC KINETYC</i></span></a>
         <p>Technology. Creativity. Life in motion. The personal digital home of Eric Kinetyc — cosplay, AI, fitness, travel and the everyday.</p>
         <div class="footer-mini-socials" id="footerSocial"></div>
       </div>
-      <div class="footer-col">
-        <h5>Explore</h5>
-        <a href="#topics">Topics</a>
-        <a href="#content">Content</a>
-        <a href="#media">Media Library</a>
-        <a href="#projects">Projects</a>
-      </div>
-      <div class="footer-col">
-        <h5>Connect</h5>
-        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://www.tiktok.com/@kinetyc_xy" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://www.instagram.com/kinetyc_xy" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://x.com/kinetyc_xy" target="_blank" rel="noopener">X</a>
-      </div>
-      <div class="footer-col">
-        <h5>Also</h5>
-        <a href="#" id="openStudioLink">Creator Studio</a>
-        <a href="#contact">Contact</a>
-        <a href="https://paypal.me/EricHodge347" target="_blank" rel="noopener">Support</a>
-        <a href="#social">All platforms</a>
-      </div>
+      <div class="footer-col"><h5>Explore</h5><a href="#topics">Topics</a><a href="#content">Content</a><a href="#media">Media Library</a><a href="#projects">Projects</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="https://www.youtube.com/" target="_blank">YouTube</a><a href="https://www.tiktok.com/@kinetyc_xy" target="_blank">TikTok</a><a href="https://www.instagram.com/kinetyc_xy" target="_blank">Instagram</a><a href="https://x.com/kinetyc_xy" target="_blank">X</a></div>
+      <div class="footer-col"><h5>Also</h5><a href="#" id="openStudioLink">Creator Studio</a><a href="#contact">Contact</a><a href="https://paypal.me/EricHodge347" target="_blank">Support</a><a href="#social">All platforms</a></div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Eric Kinetyc / KINETYC. All rights reserved.</span>
-      <div class="footer-bottom__links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Sitemap</a>
-      </div>
+      <div class="footer-bottom__links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></div>
     </div>
   </div>
 </footer>
 
-<!-- Modal — click outside does NOT close it now -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modalContent" role="dialog" aria-modal="true"></div>
-</div>
+<div class="modal-overlay" id="modalOverlay"><div class="modal" id="modalContent" role="dialog" aria-modal="true"></div></div>
 
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <aside class="drawer" id="drawer" aria-label="Creator Studio">
   <div class="drawer__head">
-    <div>
-      <div class="drawer__title">KINETYC <span>Studio</span></div>
-      <span class="drawer__sub">Creator Dashboard</span>
-    </div>
-    <button class="drawer__close" id="drawerClose" aria-label="Close">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
+    <div><div class="drawer__title">KINETYC <span>Studio</span></div><span class="drawer__sub">Creator Dashboard</span></div>
+    <button class="drawer__close" id="drawerClose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   </div>
   <div class="drawer__tabs">
     <button class="drawer__tab on" data-tab="dash">Dashboard</button>
@@ -905,66 +784,23 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       <h4 style="font-family:var(--font-display);font-weight:600;font-size:.95rem;margin-bottom:.85rem">Recent activity</h4>
       <div class="admin-list" id="recentActivity"></div>
     </div>
-
     <div class="dpanel" id="panel-create">
       <form class="admin-form" id="createForm">
         <div class="admin-form__grid">
-          <div class="field">
-            <label for="aType">Content type</label>
-            <select id="aType">
-              <option value="article">Article</option>
-              <option value="video">Video</option>
-              <option value="photo">Photo</option>
-              <option value="audio">Audio</option>
-            </select>
+          <div class="field"><label for="aType">Content type</label>
+            <select id="aType"><option value="article">Article</option><option value="video">Video</option><option value="photo">Photo</option><option value="audio">Audio</option></select>
           </div>
-          <div class="field">
-            <label for="aCategory">Category</label>
-            <select id="aCategory">
-              <option>Technology</option>
-              <option>AI</option>
-              <option>Cybersecurity</option>
-              <option>Web Development</option>
-              <option>Cosplay</option>
-              <option>Fitness</option>
-              <option>Swimming</option>
-              <option>Education</option>
-              <option>Digital Culture</option>
-            </select>
+          <div class="field"><label for="aCategory">Category</label>
+            <select id="aCategory"><option>Technology</option><option>AI</option><option>Cybersecurity</option><option>Web Development</option><option>Cosplay</option><option>Fitness</option><option>Swimming</option><option>Education</option><option>Digital Culture</option></select>
           </div>
-          <div class="field full">
-            <label for="aTitle">Title</label>
-            <input type="text" id="aTitle" placeholder="Give it a title…">
-          </div>
-          <div class="field full">
-            <label for="aDesc">Short description</label>
-            <textarea id="aDesc" placeholder="One or two lines for the card…"></textarea>
-          </div>
-          <div class="field full">
-            <label for="aFull">Full article (for Read More popup)</label>
-            <textarea id="aFull" placeholder="The full story, paragraphs, details…"></textarea>
-          </div>
-          <div class="field full">
-            <label for="aImage">Cover image URL</label>
-            <input type="text" id="aImage" placeholder="https://…">
-          </div>
-          <div class="field full">
-            <label for="aEmbed">External URL / video embed (optional)</label>
-            <input type="text" id="aEmbed" placeholder="https://youtube.com/…">
-          </div>
-          <div class="field">
-            <label for="aTags">Tags (comma separated)</label>
-            <input type="text" id="aTags" placeholder="cyberpunk, cosplay, 2026">
-          </div>
-          <div class="field">
-            <label for="aStatus">Status</label>
-            <select id="aStatus">
-              <option value="published">Published</option>
-              <option value="draft">Draft</option>
-            </select>
-          </div>
+          <div class="field full"><label for="aTitle">Title</label><input type="text" id="aTitle" placeholder="Give it a title…"></div>
+          <div class="field full"><label for="aDesc">Short description</label><textarea id="aDesc" placeholder="One or two lines for the card…"></textarea></div>
+          <div class="field full"><label for="aFull">Full article (for Read More popup)</label><textarea id="aFull" placeholder="The full story…"></textarea></div>
+          <div class="field full"><label for="aImage">Cover image URL</label><input type="text" id="aImage" placeholder="https://…"></div>
+          <div class="field full"><label for="aEmbed">External URL / embed (optional)</label><input type="text" id="aEmbed" placeholder="https://youtube.com/…"></div>
+          <div class="field"><label for="aTags">Tags (comma separated)</label><input type="text" id="aTags" placeholder="cyberpunk, cosplay"></div>
+          <div class="field"><label for="aStatus">Status</label><select id="aStatus"><option value="published">Published</option><option value="draft">Draft</option></select></div>
         </div>
-
         <div style="border-top:1px solid var(--border);padding-top:1.1rem;margin-top:.4rem">
           <label style="font-family:var(--font-mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.65rem;display:block;font-weight:500">Upload media (optional)</label>
           <div class="dropzone" id="dropzone">
@@ -975,15 +811,10 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
           </div>
           <div class="file-list" id="fileList"></div>
         </div>
-
-        <button type="submit" class="btn btn--primary btn--block" style="margin-top:.5rem">
-          Publish content
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
+        <button type="submit" class="btn btn--primary btn--block" style="margin-top:.5rem">Publish content <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         <div class="status" id="createStatus"></div>
       </form>
     </div>
-
     <div class="dpanel" id="panel-library">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;gap:1rem">
         <h4 style="font-family:var(--font-display);font-weight:600;font-size:.95rem">All content</h4>
@@ -991,31 +822,17 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       </div>
       <div class="admin-list" id="libraryList"></div>
     </div>
-
     <div class="dpanel" id="panel-social">
-      <p style="color:var(--muted);font-size:.88rem;margin-bottom:1.15rem;line-height:1.65">Edit the URLs — updates apply everywhere on the site.</p>
+      <p style="color:var(--muted);font-size:.88rem;margin-bottom:1.15rem;line-height:1.65">Edit the URLs — updates apply everywhere.</p>
       <div id="socialInputs"></div>
       <button class="btn btn--primary btn--block" id="saveSocial" style="margin-top:.75rem">Save social links</button>
       <div class="status" id="socialStatus"></div>
     </div>
-
     <div class="dpanel" id="panel-settings">
-      <div class="field" style="margin-bottom:1rem">
-        <label for="setTitle">Website title</label>
-        <input type="text" id="setTitle" value="Eric Kinetyc">
-      </div>
-      <div class="field" style="margin-bottom:1rem">
-        <label for="setTagline">Tagline</label>
-        <input type="text" id="setTagline" value="Technology. Creativity. Life in motion.">
-      </div>
-      <div class="field" style="margin-bottom:1rem">
-        <label for="setEmail">Contact email</label>
-        <input type="email" id="setEmail" value="erichodge978@gmail.com">
-      </div>
-      <div class="field" style="margin-bottom:1rem">
-        <label for="setHero">Hero image URL</label>
-        <input type="text" id="setHero" value="https://i.imgur.com/LfIjuKg.png">
-      </div>
+      <div class="field" style="margin-bottom:1rem"><label for="setTitle">Website title</label><input type="text" id="setTitle" value="Eric Kinetyc"></div>
+      <div class="field" style="margin-bottom:1rem"><label for="setTagline">Tagline</label><input type="text" id="setTagline" value="Technology. Creativity. Life in motion."></div>
+      <div class="field" style="margin-bottom:1rem"><label for="setEmail">Contact email</label><input type="email" id="setEmail" value="erichodge978@gmail.com"></div>
+      <div class="field" style="margin-bottom:1rem"><label for="setHero">Hero image URL</label><input type="text" id="setHero" value="https://i.imgur.com/LfIjuKg.png"></div>
       <button class="btn btn--primary btn--block" id="saveSettings">Save settings</button>
       <div class="status" id="settingsStatus"></div>
     </div>
@@ -1028,7 +845,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
       <input type="search" id="searchInput" placeholder="Search content, projects, articles…" autocomplete="off">
     </div>
-    <div class="search-box__hint" id="searchHint">Type to search across everything — or press <b style="color:var(--primary)">ESC</b> to close.</div>
+    <div class="search-box__hint" id="searchHint">Type to search — or press <b style="color:var(--primary)">ESC</b> to close.</div>
     <div class="search-results" id="searchResults"></div>
   </div>
 </div>
@@ -1039,7 +856,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 'use strict';
 
 /* ============================================================
-   SOCIALS — YouTube first
+   DATA
    ============================================================ */
 const SOCIALS_DEFAULT = [
   { key:'youtube',   name:'YouTube',   handle:'Eric Kinetyc',  url:'https://www.youtube.com/',
@@ -1058,216 +875,137 @@ const SOCIALS_DEFAULT = [
     svg:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4zm3 4v8l4-4 3 3V8h2v10H8z"/></svg>' },
   { key:'threads',   name:'Threads',   handle:'@erichodge347', url:'https://www.threads.com/@erichodge347?igshid=NTc4MTIwNjQ2YQ==',
     svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21a9 9 0 1 1 8.5-6M12 21c4 0 7-2 7-5.5S16 12 13 12c-2 0-3.5 1-3.5 2.5S11 17 13 17c3 0 4-2 4-4.5S15 8 12 8a4 4 0 0 0-4 4"/></svg>' },
-  { key:'linkedin',  name:'LinkedIn',  handle:'Eric Hodge',    url:'https://www.linkedin.com/in/eric-hodge-769147427?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+  { key:'linkedin',  name:'LinkedIn',  handle:'Eric Hodge',    url:'https://www.linkedin.com/in/eric-hodge-769147427',
     svg:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>' }
 ];
 
 const TOPICS = [
-  { key:'ai', name:'AI', icon:'🤖', short:'Artificial intelligence, automation, generative AI, machine learning, AI tools, and the future of intelligent systems.',
-    long:'Exploring artificial intelligence, emerging technologies, automation, generative AI, machine learning, AI tools, and the future of intelligent systems. Content includes experiments, tutorials, news, projects, and practical ways AI can be used in education, creativity, and everyday life.' },
-  { key:'cyber', name:'Cybersecurity', icon:'🛡️', short:'Digital safety, networking, privacy, ethical security, cyber threats, and protecting personal and organizational information.',
-    long:'Content focused on cybersecurity awareness, digital safety, networking, privacy, ethical security practices, cyber threats, and protecting personal and organizational information. Includes educational resources, security concepts, tools, and practical digital-safety guidance.' },
-  { key:'web', name:'Web Development', icon:'💻', short:'HTML, CSS, JavaScript, responsive design, UI/UX, web apps, databases, APIs, and modern development tools.',
-    long:'Exploring modern web technologies and digital development, including HTML, CSS, JavaScript, responsive design, UI/UX, web applications, databases, APIs, and emerging development tools. Showcasing projects, experiments, tutorials, and the process of building websites.' },
-  { key:'cosplay', name:'Cosplay', icon:'🎭', short:'Character design, costumes, makeup, props, photography, conventions, competitions, and creative transformation.',
-    long:'A creative space dedicated to cosplay, character design, costumes, makeup, props, photography, conventions, competitions, and creative transformation. Show behind-the-scenes development, finished looks, character concepts, and experiences from the cosplay community.' },
-  { key:'fitness', name:'Fitness', icon:'🏋️', short:'Exercise, movement, training routines, fitness goals, personal progress, challenges, and active lifestyle.',
-    long:'Content surrounding physical activity, exercise, movement, training routines, fitness goals, and maintaining an active lifestyle. The focus includes personal progress, workout experiences, challenges, and general fitness education.' },
-  { key:'swimming', name:'Swimming', icon:'🏊', short:'Swimming as sport and recreation — practice, technique, endurance, water confidence, training, and progress.',
-    long:'Exploring swimming as both a sport and recreational activity, including swimming practice, technique development, endurance, water confidence, training experiences, and personal progress.' },
-  { key:'education', name:'Education', icon:'🎓', short:'Technology in education, classroom experiences, teaching strategies, digital learning, and the future of education.',
-    long:'A dedicated education and teaching pillar covering technology in education, classroom experiences, teaching strategies, educational resources, digital learning, teacher development, and the future of education.' },
-  { key:'culture', name:'Digital Culture', icon:'🌐', short:'How technology influences culture, creativity, entertainment, social media, online communities, and digital identity.',
-    long:'Exploring how technology influences modern culture, creativity, entertainment, social media, online communities, digital identity, gaming, internet trends, creators, and the evolving relationship between people and technology.' }
+  { name:'AI', icon:'🤖', long:'Exploring artificial intelligence, emerging technologies, automation, generative AI, machine learning, AI tools, and the future of intelligent systems. Content includes experiments, tutorials, news, projects, and practical ways AI can be used in education, creativity, and everyday life.' },
+  { name:'Cybersecurity', icon:'🛡️', long:'Content focused on cybersecurity awareness, digital safety, networking, privacy, ethical security practices, cyber threats, and protecting personal and organizational information. Includes educational resources, security concepts, tools, and practical digital-safety guidance.' },
+  { name:'Web Development', icon:'💻', long:'Exploring modern web technologies and digital development, including HTML, CSS, JavaScript, responsive design, UI/UX, web applications, databases, APIs, and emerging development tools. Showcasing projects, experiments, tutorials, and the process of building websites.' },
+  { name:'Cosplay', icon:'🎭', long:'A creative space dedicated to cosplay, character design, costumes, makeup, props, photography, conventions, competitions, and creative transformation. Show behind-the-scenes development, finished looks, character concepts, and experiences from the cosplay community.' },
+  { name:'Fitness', icon:'🏋️', long:'Content surrounding physical activity, exercise, movement, training routines, fitness goals, and maintaining an active lifestyle. The focus includes personal progress, workout experiences, challenges, and general fitness education.' },
+  { name:'Swimming', icon:'🏊', long:'Exploring swimming as both a sport and recreational activity, including swimming practice, technique development, endurance, water confidence, training experiences, and personal progress.' },
+  { name:'Education', icon:'🎓', long:'A dedicated education and teaching pillar covering technology in education, classroom experiences, teaching strategies, educational resources, digital learning, teacher development, and the future of education.' },
+  { name:'Digital Culture', icon:'🌐', long:'Exploring how technology influences modern culture, creativity, entertainment, social media, online communities, digital identity, gaming, internet trends, creators, and the evolving relationship between people and technology.' }
 ];
 
-/* ============================================================
-   SEED CONTENT — now includes AUDIO items (2)
-   ============================================================ */
 const SEED_CONTENT = [
-  {
-    id:'seed-1', type:'article', category:'Cosplay',
-    title:'Cyberpunk Samurai — 1st Place at Guyana Game Fest 2026',
+  { id:'seed-1', type:'article', category:'Cosplay', title:'Cyberpunk Samurai — 1st Place at Guyana Game Fest 2026',
     desc:'The full story behind the award-winning build: LED integration, custom mask, katana prop and a full editorial photoshoot under red neon.',
-    fullArticle:`The Cyberpunk Samurai build started as a sketch on my phone late one night — a silhouette that mixed traditional Japanese armor lines with the harsh glow of cyberpunk signage. I wanted something that felt like it had walked out of a neon-lit street in a rainy city, but still carried the weight and posture of a samurai.
+    fullArticle:`The Cyberpunk Samurai build started as a sketch on my phone late one night — a silhouette that mixed traditional Japanese armor lines with the harsh glow of cyberpunk signage.
 
-**The build.** The helmet went through four prototypes before I settled on the final shape. It's a 3D-printed shell wrapped in matte black, with a red LED ring mounted at the eye that I wired to a small rechargeable battery pack hidden behind the collar. The mask detaches with hidden magnets so I can swap it out between takes.
+**The build.** The helmet went through four prototypes before I settled on the final shape. It's a 3D-printed shell wrapped in matte black, with a red LED ring mounted at the eye that I wired to a small rechargeable battery pack hidden behind the collar.
 
-The chest piece uses layered EVA foam with custom-cut LED strips tucked into the seams. Every strip runs back to a central controller, so the lights pulse in a slow rhythm while I walk. The katana prop is a mix of 3D-printed handle and hand-shaped foam blade — light enough to swing all day, solid enough to hold a pose under stage lighting.
+The chest piece uses layered EVA foam with custom-cut LED strips tucked into the seams. The katana prop is a mix of 3D-printed handle and hand-shaped foam blade — light enough to swing all day, solid enough to hold a pose under stage lighting.
 
-**The shoot.** We shot under a wall of RGB that kept cycling between deep red and electric blue. The contrast against the matte black armor is what makes the images hit — the LEDs read as glowing threads, and the silhouette stays clean. The photos we used for the hero shot were taken in a single six-minute window when the light was perfectly red.
+**The shoot.** We shot under a wall of RGB that kept cycling between deep red and electric blue. The contrast against the matte black armor is what makes the images hit.
 
-**The competition.** Guyana Game Fest 2026 was the first time the full build came together on stage. Between the walk-on, the pose set and the character work, everything clicked. When they announced first place, I was still holding the katana. It's the build I'm proudest of so far — and the one I'll keep refining for conventions next year.`,
-    image:'https://i.imgur.com/LfIjuKg.png', tags:['cosplay','award','cyberpunk'], status:'published',
-    featured:true, createdAt:Date.now() - 86400000 * 2, likes:24, views:812
-  },
-  {
-    id:'seed-2', type:'article', category:'AI',
-    title:'Artificial Intelligence and the new creative toolkit',
+**The competition.** Guyana Game Fest 2026 was the first time the full build came together on stage. When they announced first place, I was still holding the katana.`,
+    image:'https://i.imgur.com/LfIjuKg.png', tags:['cosplay','award'], status:'published', featured:true, createdAt:Date.now() - 86400000 * 2, likes:24, views:812 },
+  { id:'seed-2', type:'article', category:'AI', title:'Artificial Intelligence and the new creative toolkit',
     desc:'How generative tools are reshaping what independent creators can build — from concept art to production pipelines.',
-    fullArticle:`Generative AI is no longer a novelty — it's part of the daily workflow for a growing number of independent creators. Whether you're writing, designing, coding or producing video, the tools have quietly moved from "interesting demo" to "thing you actually reach for".
+    fullArticle:`Generative AI is no longer a novelty — it's part of the daily workflow for a growing number of independent creators.
 
-**What's working.** The clearest wins so far are the ones that shorten the gap between idea and draft. Concept images that used to take a day now take an hour. Voiceover drafts, subtitle generation, and quick storyboards are all realistic now. Used well, these tools compress the boring middle so you can spend more time on the parts that actually need taste.
+**What's working.** The clearest wins are the ones that shorten the gap between idea and draft. Concept images that used to take a day now take an hour.
 
-**What isn't.** Anything that requires cultural context, humor, or a distinct point of view still needs a human at the wheel. The output is confident but flat, and the moment you ask for something subtle the seams start to show. The creators getting the most out of this wave treat AI as a drafting partner, not a replacement.
+**What isn't.** Anything that requires cultural context, humor, or a distinct point of view still needs a human at the wheel.
 
-**Where it goes next.** I think the interesting shift is going to be less about bigger models and more about better integration — AI woven into the tools we already use, quietly, without needing a separate tab or a new prompt ritual. The creators who thrive will be the ones who learn to move fluidly between human judgment and machine speed.
-
-**For creators just starting.** Pick one task you do often and use AI on it for a week. Note where it helps, where it hurts, and where you'd rather just do it yourself. That's your personal workflow, and it's more valuable than any list of tools.`,
-    image:'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80',
-    tags:['ai','technology','creativity'], status:'published', featured:true,
-    createdAt:Date.now() - 86400000 * 5, likes:41, views:1240
-  },
-  {
-    id:'seed-3', type:'video', category:'Cosplay',
-    title:'Behind the Mask — Cyberpunk Samurai Stage Walk',
+**Where it goes next.** The interesting shift is going to be less about bigger models and more about better integration — AI woven into the tools we already use.`,
+    image:'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80', tags:['ai','technology'], status:'published', featured:true, createdAt:Date.now() - 86400000 * 5, likes:41, views:1240 },
+  { id:'seed-3', type:'video', category:'Cosplay', title:'Behind the Mask — Cyberpunk Samurai Stage Walk',
     desc:'Full costume walk-through at the Guyana Game Fest 2026 sponsor wall. Watch the silhouette shot come together.',
-    fullArticle:`This video captures the full stage walk-through at Guyana Game Fest 2026 — from the moment I stepped onto the sponsor wall to the final pose under the red lights.
+    fullArticle:`This video captures the full stage walk-through at Guyana Game Fest 2026.
 
-**What to look for.** The LED strips on the chest pulse in a slow rhythm — that's a tiny controller hidden behind the collar. The katana swing at 00:48 was the moment the judges later told me sealed the score. And the way the mask reflects the stage lighting is something that only reads in motion.
+**What to look for.** The LED strips on the chest pulse in a slow rhythm — that's a tiny controller hidden behind the collar.
 
-**Behind the scenes.** We shot this on a phone rig with a gimbal because the stage crew only gave us a two-minute window between categories. The wide shot at the end was captured by a friend in the audience — that's the one that became the poster image for the whole event.
+**Behind the scenes.** We shot this on a phone rig with a gimbal because the stage crew only gave us a two-minute window.
 
-**For other cosplayers.** If you're building something with LEDs, bring backups. I burned through two battery packs and one strip during the day. Pack extra tape, extra clips, and a small sewing kit — you will need them.`,
-    image:'https://i.imgur.com/d00aV9O.png', tags:['cosplay','event','stage'], status:'published',
-    embed:'https://www.youtube.com/embed/dQw4w9WgXcQ', featured:false,
-    createdAt:Date.now() - 86400000 * 7, likes:18, views:396
-  },
-  {
-    id:'seed-4', type:'photo', category:'Cosplay',
-    title:'Concept shoot — blue & red light experiments',
+**For other cosplayers.** If you're building something with LEDs, bring backups.`,
+    image:'https://i.imgur.com/d00aV9O.png', tags:['cosplay','event'], status:'published', embed:'https://www.youtube.com/embed/dQw4w9WgXcQ', featured:false, createdAt:Date.now() - 86400000 * 7, likes:18, views:396 },
+  { id:'seed-4', type:'photo', category:'Cosplay', title:'Concept shoot — blue & red light experiments',
     desc:'A character concept photography session exploring color, silhouette and high contrast light.',
     fullArticle:`A concept shoot is where I test things before they go on stage. This session was about one question: how does the same costume read under radically different light?
 
-**The setup.** A single adjustable RGB panel, one reflector, and a wall that let us bounce light back into the helmet. We shot the same pose under deep red, then swapped to a cool blue, then ran both at once on opposite sides.
-
-**What we learned.** Red light makes the LED ring on the mask disappear — it blends into the ambient glow. Blue light makes it pop. That's the kind of thing you can only find by shooting it, and it directly shaped how I lit the stage walk at Game Fest.
-
-**What's next.** I want to try a longer session with a fog machine and a moving light source. The concept work is where the real character lives — the finished stage look is just the tightest possible version of what we discovered here.`,
-    image:'https://i.imgur.com/PmGpQsJ.png', tags:['cosplay','photography','lighting'], status:'published',
-    featured:false, createdAt:Date.now() - 86400000 * 9, likes:32, views:540
-  },
-  {
-    id:'seed-5', type:'photo', category:'Cosplay',
-    title:'Behind the scenes — costume build',
+**What we learned.** Red light makes the LED ring on the mask disappear — it blends into the ambient glow. Blue light makes it pop.`,
+    image:'https://i.imgur.com/PmGpQsJ.png', tags:['cosplay','photography'], status:'published', featured:false, createdAt:Date.now() - 86400000 * 9, likes:32, views:540 },
+  { id:'seed-5', type:'photo', category:'Cosplay', title:'Behind the scenes — costume build',
     desc:'Process shots from early mask iterations to final fits, LED wiring and katana assembly.',
     fullArticle:`This is the part most people never see — the messy middle of the build.
 
-**Mask iterations.** Four prototypes. The first was too wide and read like a motorcycle helmet. The second had a great shape but no room for electronics. The third was almost right but the LED ring sat too high. The fourth is what you see on stage.
+**Mask iterations.** Four prototypes. The first was too wide and read like a motorcycle helmet.
 
-**LED wiring.** Every strip runs back to a central controller mounted behind the chest plate. The trickiest part was routing the wires through the collar without them showing in photographs. I ended up using a black cable sleeve and hiding the joints in the seams of the shoulder pads.
+**LED wiring.** Every strip runs back to a central controller mounted behind the chest plate.
 
-**Katana.** The handle is 3D-printed in two halves, then glued and sanded smooth. The blade is layered EVA foam, sealed, then painted to look like a matte metal. It weighs less than a pound, which means I can hold a pose for the entire walk-on without my arms giving out.
-
-**What I'd do differently.** Start earlier. Every build takes twice as long as you think it will, and the last 10% is where everything either comes together or falls apart.`,
-    image:'https://i.imgur.com/niBIkAg.png', tags:['cosplay','build','bts'], status:'published',
-    featured:false, createdAt:Date.now() - 86400000 * 11, likes:15, views:302
-  },
-  {
-    id:'seed-6', type:'photo', category:'Swimming',
-    title:'Pool sessions — morning swim',
+**What I'd do differently.** Start earlier. Every build takes twice as long as you think it will.`,
+    image:'https://i.imgur.com/niBIkAg.png', tags:['cosplay','build'], status:'published', featured:false, createdAt:Date.now() - 86400000 * 11, likes:15, views:302 },
+  { id:'seed-6', type:'photo', category:'Swimming', title:'Pool sessions — morning swim',
     desc:'A quiet morning in the water. Consistency, focus and the discipline that powers everything else.',
-    fullArticle:`Swimming is the one thing in my week that has no audience, no edit, and no notification. It's just me, the water, and the lane.
+    fullArticle:`Swimming is the one thing in my week that has no audience, no edit, and no notification.
 
-**Why I swim.** The pool resets my head. There's something about the rhythm of breathing every third stroke that forces you to stop thinking in sentences. Ideas come back clearer after 40 minutes in the water than after four hours at a desk.
+**Why I swim.** The pool resets my head. Ideas come back clearer after 40 minutes in the water than after four hours at a desk.
 
-**The routine.** Warm-up: 400 meters easy. Main set: 8 x 100 on a 2:00 interval, alternating free and back. Cool-down: 200 meters easy, focusing on long strokes and long exhales. Three mornings a week, no exceptions when I can help it.
-
-**What it's taught me.** Consistency beats intensity every time. The weeks I train four times are better than the weeks I train hard twice. The pool doesn't care about your motivation — it only cares whether you showed up.`,
-    image:'https://i.imgur.com/Spegerj.png', tags:['swimming','fitness','routine'], status:'published',
-    featured:false, createdAt:Date.now() - 86400000 * 14, likes:22, views:418
-  },
-  {
-    id:'seed-7', type:'photo', category:'Swimming',
-    title:'Training days — lane work',
+**What it's taught me.** Consistency beats intensity every time.`,
+    image:'https://i.imgur.com/Spegerj.png', tags:['swimming','fitness'], status:'published', featured:false, createdAt:Date.now() - 86400000 * 14, likes:22, views:418 },
+  { id:'seed-7', type:'photo', category:'Swimming', title:'Training days — lane work',
     desc:'Not a bodybuilding page. Just the work behind the output. Water, breath, repetition.',
     fullArticle:`The lane is where everything gets tested. Stroke technique, pacing, breath control, patience.
 
-**What a session looks like.** Kick drills first, because if the legs are wrong the whole stroke falls apart. Then pull sets with a buoy to isolate the upper body. Then full-stroke work with a tempo trainer, which is one of the most honest pieces of equipment you'll ever use — it beeps at the pace you told it, whether you're ready or not.
+**What a session looks like.** Kick drills first, then pull sets with a buoy, then full-stroke work with a tempo trainer.
 
-**Progress is boring.** The improvements are tiny. A second off a 100. A cleaner turn. A straighter body line. You don't notice them until you look back at the numbers from three months ago and realize everything has quietly shifted.
-
-**The honest version.** Some days the pool wins. You get out tired, slow, and discouraged. You come back the next morning anyway. That's the whole thing.`,
-    image:'https://i.imgur.com/cvtO1rD.png', tags:['swimming','fitness','training'], status:'published',
-    featured:false, createdAt:Date.now() - 86400000 * 16, likes:11, views:210
-  },
-  {
-    id:'seed-8', type:'article', category:'Travel',
-    title:'USA travel journal — city streets and skyline shots',
+**The honest version.** Some days the pool wins. You come back the next morning anyway.`,
+    image:'https://i.imgur.com/cvtO1rD.png', tags:['swimming','training'], status:'published', featured:false, createdAt:Date.now() - 86400000 * 16, likes:11, views:210 },
+  { id:'seed-8', type:'article', category:'Travel', title:'USA travel journal — city streets and skyline shots',
     desc:'From racing-jacket mornings to quiet evenings with a tablet in hand. A working record of the trip.',
     fullArticle:`Some trips are vacations. This one was a working trip — laptop in the bag, camera on the shoulder, notebook open on every flight.
 
-**The cities.** Every city has a rhythm you can only feel on foot. I walked more than I took rides, mostly because the interesting parts of any city live between the landmarks. The skyline shots came from rooftops and riverbanks at golden hour — the ones where the light was already fading and I only had a few minutes to get the frame.
+**The cities.** Every city has a rhythm you can only feel on foot.
 
-**What I carried.** One camera body, two lenses, a tablet for editing, and the racing jacket that ended up in half the photos. The tablet turned out to be the most useful piece of gear — I edited photos on the plane and wrote most of the notes for this journal in hotel lobbies between meetings.
+**What I carried.** One camera body, two lenses, a tablet for editing, and the racing jacket that ended up in half the photos.
 
-**What I learned.** Travel makes you a better creator because it forces you to notice. You can't rely on the routine to make things interesting — everything is new, and if you're paying attention, everything is a potential frame.
-
-**What's next.** I want to do a longer trip with a single fixed lens and no plan. Just a bag, a notebook, and the willingness to get lost for a week.`,
-    image:'https://i.imgur.com/iScwDxN.png', tags:['travel','life','usa'], status:'published',
-    featured:true, createdAt:Date.now() - 86400000 * 20, likes:47, views:1530
-  },
-  /* ---------- NEW AUDIO CONTENT (2 items) ---------- */
-  {
-    id:'seed-9', type:'audio', category:'Digital Culture',
-    title:'The KINETYC Update — Episode 01: Why I document everything',
-    desc:'A short audio note on why I keep a running record of what I discover, create and experience — and what it's taught me so far.',
+**What I learned.** Travel makes you a better creator because it forces you to notice.`,
+    image:'https://i.imgur.com/iScwDxN.png', tags:['travel','life'], status:'published', featured:true, createdAt:Date.now() - 86400000 * 20, likes:47, views:1530 },
+  { id:'seed-9', type:'audio', category:'Digital Culture', title:'The KINETYC Update — Episode 01: Why I document everything',
+    desc:'A short audio note on why I keep a running record of what I discover, create and experience — and what it\'s taught me so far.',
     fullArticle:`This is the first episode of The KINETYC Update — a short, informal audio series where I share thoughts on creating, learning, and building a public record of the journey.
 
-**Why audio.** Not everything needs a camera. Some thoughts land better in voice — they carry tone, hesitation, and honesty that a written paragraph often flattens out.
+**Why audio.** Not everything needs a camera. Some thoughts land better in voice.
 
-**What this episode covers.** Why I started documenting everything: the cosplay builds, the AI experiments, the pool sessions, the travels. How keeping a record has changed the way I pay attention, and why I think more creators should do the same.
+**What this episode covers.** Why I started documenting everything: the cosplay builds, the AI experiments, the pool sessions, the travels.
 
-**What's next.** Future episodes will be shorter and more focused — single ideas, single stories, no scripts. Subscribe on YouTube or follow on TikTok to catch them.`,
-    image:'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80',
-    tags:['audio','podcast','creator'], status:'published', featured:false,
-    createdAt:Date.now() - 86400000 * 1, likes:8, views:87
-  },
-  {
-    id:'seed-10', type:'audio', category:'Technology',
-    title:'Voice note — my current AI + creator workflow',
+**What's next.** Future episodes will be shorter and more focused — single ideas, single stories, no scripts.`,
+    image:'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&q=80', tags:['audio','podcast'], status:'published', featured:false, createdAt:Date.now() - 86400000 * 1, likes:8, views:87 },
+  { id:'seed-10', type:'audio', category:'Technology', title:'Voice note — my current AI + creator workflow',
     desc:'A quick audio walkthrough of the tools I actually use every day, and how I combine them with manual work.',
     fullArticle:`This is a voice memo — unedited — walking through the exact stack I use when I'm building KINETYC content.
 
-**The stack.** Everything runs through a single browser window with a few pinned tabs. I use AI for drafting (concepts, titles, image prompts), a manual review pass for anything that ships with my name on it, and a very small set of tools for the actual publishing.
+**The stack.** AI for drafting (concepts, titles, image prompts), a manual review pass for anything that ships, and a very small set of tools for publishing.
 
-**The principle.** Every tool earns its place. If I haven't reached for something in two weeks, it gets cut. The goal isn't to have the most impressive setup — it's to have one that doesn't get in the way.
+**The principle.** Every tool earns its place. If I haven't reached for something in two weeks, it gets cut.
 
-**Why voice.** Writing this out would have taken an hour and I'd have edited out the interesting parts. Speaking it took eight minutes and kept the edges. That's the whole reason this format exists.`,
-    image:'https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=1200&q=80',
-    tags:['audio','ai','workflow'], status:'published', featured:false,
-    createdAt:Date.now() - 86400000 * 3, likes:5, views:54
-  }
+**Why voice.** Writing this out would have taken an hour and I'd have edited out the interesting parts.`,
+    image:'https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=1200&q=80', tags:['audio','ai','workflow'], status:'published', featured:false, createdAt:Date.now() - 86400000 * 3, likes:5, views:54 }
 ];
 
 const SEED_PROJECTS = [
-  { id:'proj-1', title:'KINETYC Digital Platform',
-    desc:'The creator platform you\'re looking at right now — a dynamic content system with a studio dashboard, media library, search and social hub. Built to run without touching code.',
-    image:'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1400&q=80',
-    tech:['HTML','CSS','JavaScript','IndexedDB','Design System'],
-    status:'Live', link:'#', tags:['web','creative'] },
-  { id:'proj-2', title:'Cyberpunk Samurai — Cosplay Build',
-    desc:'Award-winning cosplay build featuring integrated LED systems, custom 3D-printed mask, katana prop and a full editorial photoshoot under red neon.',
-    image:'https://i.imgur.com/iKnQXrq.png',
-    tech:['3D Printing','Electronics','LED','Fabrication','Photography'],
-    status:'Completed · 1st Place', link:'#', tags:['cosplay','build'] },
-  { id:'proj-3', title:'AI & Technology Concepts',
-    desc:'A running collection of experiments and writing across artificial intelligence, cybersecurity, and emerging technology — from tool reviews to concept work.',
-    image:'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80',
-    tech:['AI','Cybersecurity','Research','Writing'],
-    status:'Ongoing', link:'#', tags:['tech','ai'] }
+  { id:'proj-1', title:'KINETYC Digital Platform', desc:'The creator platform you\'re looking at right now — a dynamic content system with a studio dashboard, media library, search and social hub.',
+    image:'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1400&q=80', tech:['HTML','CSS','JavaScript','IndexedDB'], status:'Live', link:'#' },
+  { id:'proj-2', title:'Cyberpunk Samurai — Cosplay Build', desc:'Award-winning cosplay build featuring integrated LED systems, custom 3D-printed mask, katana prop and a full editorial photoshoot under red neon.',
+    image:'https://i.imgur.com/iKnQXrq.png', tech:['3D Printing','Electronics','LED','Photography'], status:'Completed · 1st Place', link:'#' },
+  { id:'proj-3', title:'AI & Technology Concepts', desc:'A running collection of experiments and writing across artificial intelligence, cybersecurity, and emerging technology.',
+    image:'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80', tech:['AI','Cybersecurity','Research'], status:'Ongoing', link:'#' }
 ];
 
 /* ============================================================
-   STATE — LS version bumped to force fresh load with audio content
+   STATE
    ============================================================ */
 const LS_KEYS = {
-  content:'kinetyc_content_v6',
-  projects:'kinetyc_projects_v6',
-  socials:'kinetyc_socials_v6',
-  settings:'kinetyc_settings_v6',
-  theme:'kinetyc_theme_v6',
-  likes:'kinetyc_likes_v6'
+  content:'kinetyc_content_v7',
+  projects:'kinetyc_projects_v7',
+  socials:'kinetyc_socials_v7',
+  settings:'kinetyc_settings_v7',
+  theme:'kinetyc_theme_v7',
+  likes:'kinetyc_likes_v7'
 };
 
 const state = {
@@ -1277,7 +1015,7 @@ const state = {
 };
 
 function load(){
-  const get = (key, fb) => { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fb; } catch { return fb; } };
+  const get = (k, fb) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; } catch { return fb; } };
   state.content = get(LS_KEYS.content, SEED_CONTENT);
   state.projects = get(LS_KEYS.projects, SEED_PROJECTS);
   state.socials = get(LS_KEYS.socials, SOCIALS_DEFAULT);
@@ -1295,16 +1033,13 @@ const saveLikes = () => localStorage.setItem(LS_KEYS.likes, JSON.stringify(state
    ============================================================ */
 const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
-function esc(s){
-  return String(s || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
-}
-function fmtDate(ts){ return new Date(ts).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'}); }
-function uid(){ return 'c-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,7); }
+const esc = (s) => String(s || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const fmtDate = (ts) => new Date(ts).toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});
+const uid = () => 'c-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,7);
 function renderMarkdownish(text){
   let html = esc(text);
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  const parts = html.split(/\n\n+/);
-  return parts.map(p => `<p>${p.replace(/\n/g,'<br>')}</p>`).join('');
+  return html.split(/\n\n+/).map(p => `<p>${p.replace(/\n/g,'<br>')}</p>`).join('');
 }
 
 let toastTimer;
@@ -1323,42 +1058,26 @@ function toast(msg, isErr){
 function applyTheme(t){ document.documentElement.setAttribute('data-theme', t); localStorage.setItem(LS_KEYS.theme, t); }
 applyTheme(localStorage.getItem(LS_KEYS.theme) || 'dark');
 $('#themeBtn').addEventListener('click', () => {
-  const cur = document.documentElement.getAttribute('data-theme');
-  applyTheme(cur === 'dark' ? 'light' : 'dark');
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
 });
 
 /* ============================================================
-   SOCIALS RENDER
+   SOCIALS
    ============================================================ */
 function renderSocials(){
   $('#heroSocial').innerHTML = `<span class="hero__social-label">Follow</span>` +
-    state.socials.slice(0,6).map(s =>
-      `<a class="social-chip" href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.name)}" title="${esc(s.name)}">${s.svg}</a>`
-    ).join('');
-
+    state.socials.slice(0,6).map(s => `<a class="social-chip" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.name)}">${s.svg}</a>`).join('');
   $('#socialGrid').innerHTML = state.socials.map(s => `
     <a class="soc" href="${esc(s.url)}" target="_blank" rel="noopener">
-      <div class="soc__left">
-        <div class="soc__icon">${s.svg}</div>
-        <div>
-          <div class="soc__name">${esc(s.name)}</div>
-          <div class="soc__handle">${esc(s.handle)}</div>
-        </div>
-      </div>
+      <div class="soc__left"><div class="soc__icon">${s.svg}</div><div><div class="soc__name">${esc(s.name)}</div><div class="soc__handle">${esc(s.handle)}</div></div></div>
       <span class="soc__arrow">↗</span>
-    </a>
-  `).join('');
-
-  $('#footerSocial').innerHTML = state.socials.map(s =>
-    `<a href="${esc(s.url)}" target="_blank" rel="noopener" aria-label="${esc(s.name)}" title="${esc(s.name)}">${s.svg}</a>`
-  ).join('');
-
+    </a>`).join('');
+  $('#footerSocial').innerHTML = state.socials.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.name)}">${s.svg}</a>`).join('');
   $('#socialInputs').innerHTML = state.socials.map(s => `
     <div class="social-input">
       <div class="social-input__label">${s.svg}<span>${esc(s.name)}</span></div>
       <input type="url" data-social-key="${s.key}" value="${esc(s.url)}" placeholder="https://…">
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 /* ============================================================
@@ -1366,24 +1085,20 @@ function renderSocials(){
    ============================================================ */
 function renderTopics(){
   $('#topicsGrid').innerHTML = TOPICS.map(t => `
-    <div class="topic" tabindex="0" aria-label="${esc(t.name)}: ${esc(t.short)}">
+    <div class="topic" tabindex="0">
       <div class="topic__head">
         <div class="topic__icon">${t.icon}</div>
-        <div>
-          <div class="topic__name">${esc(t.name)}</div>
-          <div class="topic__hint">Hover for details</div>
-        </div>
+        <div><div class="topic__name">${esc(t.name)}</div><div class="topic__hint">Hover for details</div></div>
       </div>
       <div class="topic__tip" role="tooltip">
         <div class="topic__tip-head"><span>${t.icon}</span> ${esc(t.name)}</div>
         <div class="topic__tip-body">${esc(t.long)}</div>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 /* ============================================================
-   CARDS
+   CARDS — always visible, animated on enter
    ============================================================ */
 function pillClass(type){
   if (type === 'video') return 'pill--primary';
@@ -1395,15 +1110,17 @@ function typeLabel(type){
   return ({ article:'Article', video:'Video', photo:'Photo', audio:'Audio' }[type]) || 'Post';
 }
 
-function cardHTML(item){
+function cardHTML(item, index = 0){
   const liked = !!state.likes[item.id];
   const media = item.type === 'video' && item.embed
     ? `<iframe src="${esc(item.embed)}" loading="lazy" allowfullscreen></iframe>`
     : item.image
       ? `<img src="${esc(item.image)}" alt="${esc(item.title)}" loading="lazy">`
       : '';
+  // Stagger entrance via CSS custom property
+  const delay = Math.min(index * 0.05, 0.4);
   return `
-    <article class="card rv" data-id="${item.id}">
+    <article class="card" data-id="${item.id}" style="animation-delay:${delay}s">
       <div class="card__media">
         ${media}
         <div class="card__overlay"></div>
@@ -1413,11 +1130,7 @@ function cardHTML(item){
         </div>
       </div>
       <div class="card__body">
-        <div class="card__meta">
-          <b>${esc(item.category)}</b>
-          <span>·</span>
-          <span>${fmtDate(item.createdAt)}</span>
-        </div>
+        <div class="card__meta"><b>${esc(item.category)}</b><span>·</span><span>${fmtDate(item.createdAt)}</span></div>
         <h3>${esc(item.title)}</h3>
         <p>${esc(item.desc)}</p>
         <div class="card__foot">
@@ -1428,58 +1141,50 @@ function cardHTML(item){
           </button>
         </div>
       </div>
-    </article>
-  `;
+    </article>`;
 }
 
-/* ============================================================
-   TAB COUNTS — NEW
-   ============================================================ */
 function updateTabCounts(){
-  const published = state.content.filter(c => c.status === 'published');
+  const pub = state.content.filter(c => c.status === 'published');
   const counts = {
-    all: published.length,
-    article: published.filter(c => c.type === 'article').length,
-    video: published.filter(c => c.type === 'video').length,
-    photo: published.filter(c => c.type === 'photo').length,
-    audio: published.filter(c => c.type === 'audio').length
+    all: pub.length,
+    article: pub.filter(c => c.type === 'article').length,
+    video: pub.filter(c => c.type === 'video').length,
+    photo: pub.filter(c => c.type === 'photo').length,
+    audio: pub.filter(c => c.type === 'audio').length
   };
   $$('[data-count-for]').forEach(el => {
-    const key = el.dataset.countFor;
-    if (counts[key] !== undefined) el.textContent = counts[key];
+    const k = el.dataset.countFor;
+    if (counts[k] !== undefined) el.textContent = counts[k];
   });
 }
 
 /* ============================================================
-   FEATURED
+   RENDER FEATURED + MEDIA — FIXED
    ============================================================ */
-function renderFeatured(){
-  const published = state.content.filter(c => c.status === 'published');
-  const featured = published.filter(c => c.featured).sort((a,b) => b.createdAt - a.createdAt).slice(0,3);
-  const list = featured.length ? featured : published.sort((a,b) => b.createdAt - a.createdAt).slice(0,3);
-  const grid = $('#featuredGrid');
-  if (!list.length) {
-    grid.innerHTML = emptyStateHTML('No content yet', 'Open the Creator Studio to publish your first post.', null);
-    return;
-  }
-  grid.innerHTML = list.map(cardHTML).join('');
-  bindCardEvents(grid);
-}
-
-function emptyStateHTML(title, msg, clearLabel){
+function emptyStateHTML(title, msg, showClear){
   return `
     <div class="empty-state">
       <span class="empty-state__ico">🔍</span>
       <h4>${esc(title)}</h4>
       <p>${esc(msg)}</p>
-      ${clearLabel ? `<button class="empty-state__btn" id="emptyStateClear" type="button">${esc(clearLabel)}</button>` : ''}
-    </div>
-  `;
+      ${showClear ? `<button class="empty-state__btn" id="emptyStateClear" type="button">Clear filter</button>` : ''}
+    </div>`;
 }
 
-/* ============================================================
-   MEDIA
-   ============================================================ */
+function renderFeatured(){
+  const pub = state.content.filter(c => c.status === 'published');
+  const featured = pub.filter(c => c.featured).sort((a,b) => b.createdAt - a.createdAt).slice(0,3);
+  const list = featured.length ? featured : pub.slice().sort((a,b) => b.createdAt - a.createdAt).slice(0,3);
+  const grid = $('#featuredGrid');
+  if (!list.length) {
+    grid.innerHTML = emptyStateHTML('No content yet', 'Open the Creator Studio to publish your first post.', false);
+    return;
+  }
+  grid.innerHTML = list.map((c, i) => cardHTML(c, i)).join('');
+  bindCardEvents(grid);
+}
+
 function renderMedia(){
   const grid = $('#mediaGrid');
   let items = state.content.filter(c => c.status === 'published');
@@ -1496,25 +1201,28 @@ function renderMedia(){
   items.sort((a,b) => b.createdAt - a.createdAt);
 
   if (!items.length) {
-    const filterLabel = state.filter === 'all' ? 'content' : state.filter + ' content';
+    const label = state.filter === 'all' ? 'content' : state.filter + ' content';
     grid.innerHTML = emptyStateHTML(
-      'No ' + filterLabel + ' found',
-      state.search
-        ? 'Try a different search term or clear the search to see everything.'
-        : 'Nothing published in this category yet. Try a different filter.',
-      'Clear filter'
+      'No ' + label + ' found',
+      state.search ? 'Try a different search term, or clear the search.' : 'Nothing published in this category yet.',
+      true
     );
     const btn = $('#emptyStateClear');
     if (btn) btn.addEventListener('click', () => {
       state.filter = 'all';
       state.search = '';
       $('#mediaSearch').value = '';
-      $$('#filterTabs .tab').forEach(x => x.classList.toggle('active', x.dataset.filter === 'all'));
+      $$('#filterTabs .tab').forEach(x => {
+        const isAll = x.dataset.filter === 'all';
+        x.classList.toggle('active', isAll);
+        x.setAttribute('aria-selected', String(isAll));
+      });
       renderMedia();
     });
     return;
   }
-  grid.innerHTML = items.map(cardHTML).join('');
+
+  grid.innerHTML = items.map((c, i) => cardHTML(c, i)).join('');
   bindCardEvents(grid);
 }
 
@@ -1523,8 +1231,7 @@ function bindCardEvents(scope){
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const id = btn.dataset.like;
-      if (state.likes[id]) delete state.likes[id];
-      else state.likes[id] = true;
+      if (state.likes[id]) delete state.likes[id]; else state.likes[id] = true;
       saveLikes();
       btn.classList.toggle('on', !!state.likes[id]);
       toast(state.likes[id] ? 'Saved to favourites' : 'Removed from favourites');
@@ -1545,7 +1252,7 @@ function bindCardEvents(scope){
 }
 
 /* ============================================================
-   MODAL — updated: backdrop click does NOT close
+   MODAL
    ============================================================ */
 const modalOverlay = $('#modalOverlay');
 const modalContent = $('#modalContent');
@@ -1555,7 +1262,7 @@ function openModal(id){
   if (!item) return;
   const fullHTML = item.fullArticle
     ? renderMarkdownish(item.fullArticle)
-    : `<p>${esc(item.desc || '')}</p><p style="color:var(--muted);font-style:italic">Full article coming soon.</p>`;
+    : `<p>${esc(item.desc || '')}</p>`;
 
   modalContent.innerHTML = `
     <button class="modal__close" id="modalClose" type="button" aria-label="Close">
@@ -1576,18 +1283,13 @@ function openModal(id){
       <span class="modal__eyebrow">${fmtDate(item.createdAt)} · ${item.views || 0} views · ${item.likes || 0} likes</span>
       ${item.embed ? `<p style="margin-bottom:1.5rem"><a href="${esc(item.embed)}" target="_blank" rel="noopener" class="btn btn--glass btn--sm">Open external media ↗</a></p>` : ''}
       ${fullHTML}
-      ${(item.tags && item.tags.length) ? `
-        <div class="modal__tags">
-          ${item.tags.map(t => `<span class="modal__tag">#${esc(t)}</span>`).join('')}
-        </div>
-      ` : ''}
+      ${(item.tags && item.tags.length) ? `<div class="modal__tags">${item.tags.map(t => `<span class="modal__tag">#${esc(t)}</span>`).join('')}</div>` : ''}
       <div class="modal__actions">
         <a href="#contact" class="btn btn--primary btn--sm" data-close-modal>Get in touch</a>
         <button class="btn btn--glass btn--sm" id="modalShare" type="button">Share</button>
         <button class="btn btn--ghost btn--sm" id="modalCloseBottom" type="button">Close</button>
       </div>
-    </div>
-  `;
+    </div>`;
 
   modalOverlay.classList.add('on');
   document.body.style.overflow = 'hidden';
@@ -1606,11 +1308,6 @@ function closeModal(){
   modalOverlay.classList.remove('on');
   document.body.style.overflow = '';
 }
-
-/* IMPORTANT: Backdrop click no longer closes the modal.
-   Only the X button, the bottom Close button, and ESC key close it. */
-// (removed) modalOverlay.addEventListener('click', e => { if (e.target === modalOverlay) closeModal(); });
-
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && modalOverlay.classList.contains('on')) closeModal();
 });
@@ -1620,37 +1317,31 @@ document.addEventListener('keydown', e => {
    ============================================================ */
 function renderProjects(){
   const wrap = $('#projectsList');
-  if (!state.projects.length) {
-    wrap.innerHTML = `<div style="text-align:center;padding:3rem 1rem;color:var(--muted);border:1px dashed var(--border);border-radius:16px">No projects yet.</div>`;
-    return;
-  }
+  if (!state.projects.length) { wrap.innerHTML = ''; return; }
   wrap.innerHTML = state.projects.map(p => `
-    <article class="project rv">
+    <article class="project">
       <div class="project__media"><img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy"></div>
       <div class="project__body">
         <span class="project__status">${esc(p.status)}</span>
         <h3>${esc(p.title)}</h3>
         <p>${esc(p.desc)}</p>
         <div class="tech-tags">${(p.tech||[]).map(t => `<span class="tech-tag">${esc(t)}</span>`).join('')}</div>
-        <a href="${esc(p.link||'#')}" class="btn btn--glass btn--sm" style="align-self:flex-start" target="${p.link && p.link!=='#'?'_blank':'_self'}" rel="noopener">
-          View project
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
-        </a>
+        <a href="${esc(p.link||'#')}" class="btn btn--glass btn--sm" style="align-self:flex-start">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
       </div>
-    </article>
-  `).join('');
-  revealInit();
+    </article>`).join('');
 }
 
 /* ============================================================
-   REVEAL + COUNTERS
+   REVEAL (only for section-level .rv elements)
    ============================================================ */
 let revealObserver;
 function revealInit(){
   if (!('IntersectionObserver' in window)) { $$('.rv').forEach(el => el.classList.add('on')); return; }
   if (!revealObserver) {
     revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); revealObserver.unobserve(e.target); } });
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('on'); revealObserver.unobserve(e.target); }
+      });
     }, { threshold:.12, rootMargin:'0px 0px -50px 0px' });
   }
   $$('.rv:not(.on)').forEach(el => revealObserver.observe(el));
@@ -1660,12 +1351,11 @@ function animateCounters(){
   $$('[data-count]').forEach(el => {
     const target = parseInt(el.dataset.count, 10);
     if (!Number.isFinite(target)) return;
-    const duration = 1400;
     const start = performance.now();
+    const duration = 1400;
     function tick(t){
       const p = Math.min(1, (t - start) / duration);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased).toLocaleString();
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))).toLocaleString();
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
@@ -1673,7 +1363,7 @@ function animateCounters(){
 }
 
 /* ============================================================
-   NAV ACTIVE + SMOOTH SCROLL
+   NAV
    ============================================================ */
 const sectionIds = ['top','about','topics','content','projects','contact'];
 window.addEventListener('scroll', () => {
@@ -1695,16 +1385,23 @@ $$('a[href^="#"]').forEach(a => {
 });
 
 /* ============================================================
-   FILTER TABS — improved with counts
+   FILTER — FIXED: update counts, aria, re-render everything
    ============================================================ */
 $('#filterTabs').addEventListener('click', e => {
   const b = e.target.closest('.tab');
   if (!b) return;
   e.preventDefault();
-  $$('#filterTabs .tab').forEach(x => x.classList.remove('active'));
-  b.classList.add('active');
-  state.filter = b.dataset.filter;
+  const filter = b.dataset.filter;
+  if (!filter) return;
+  state.filter = filter;
+  $$('#filterTabs .tab').forEach(x => {
+    const isActive = x.dataset.filter === filter;
+    x.classList.toggle('active', isActive);
+    x.setAttribute('aria-selected', String(isActive));
+  });
+  // Update search clear if filter changed
   renderMedia();
+  updateTabCounts();
 });
 
 $('#mediaSearch').addEventListener('input', e => {
@@ -1748,8 +1445,7 @@ $('#searchInput').addEventListener('input', e => {
         <div class="search-result__meta">${esc(typeLabel(h.type))} · ${esc(h.category)}</div>
       </div>
       <span style="color:var(--muted-2);font-size:1.1rem">→</span>
-    </div>
-  `).join('');
+    </div>`).join('');
 
   $$('.search-result', results).forEach(r => r.addEventListener('click', () => {
     const id = r.dataset.target;
@@ -1759,10 +1455,9 @@ $('#searchInput').addEventListener('input', e => {
 });
 
 /* ============================================================
-   CONTACT FORM
+   CONTACT
    ============================================================ */
 const OWNER_EMAIL = 'erichodge978@gmail.com';
-
 $('#contactForm').addEventListener('submit', e => {
   e.preventDefault();
   const n = $('#cName'), em = $('#cEmail'), subj = $('#cSubject'), msg = $('#cMsg');
@@ -1773,15 +1468,10 @@ $('#contactForm').addEventListener('submit', e => {
   if (!re.test(em.value.trim())) { em.closest('.field').classList.add('error'); ok = false; }
   if (msg.value.trim().length < 5) { msg.closest('.field').classList.add('error'); ok = false; }
   const status = $('#contactStatus');
-  if (!ok) {
-    status.className = 'status err';
-    status.textContent = 'Please fix the highlighted fields.';
-    return;
-  }
+  if (!ok) { status.className = 'status err'; status.textContent = 'Please fix the highlighted fields.'; return; }
   const subject = `[KINETYC] ${subj.value} — from ${n.value.trim()}`;
   const body = `Name: ${n.value.trim()}\nEmail: ${em.value.trim()}\nSubject: ${subj.value}\n\n${msg.value.trim()}`;
-  const mailto = `mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  window.location.href = mailto;
+  window.location.href = `mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   status.className = 'status ok';
   status.textContent = `Opening your email app — your message is ready to send to ${OWNER_EMAIL}.`;
   n.value = ''; em.value = ''; msg.value = '';
@@ -1789,7 +1479,7 @@ $('#contactForm').addEventListener('submit', e => {
 });
 
 /* ============================================================
-   DRAWER (Studio)
+   DRAWER
    ============================================================ */
 const drawer = $('#drawer');
 const drawerOverlay = $('#drawerOverlay');
@@ -1821,13 +1511,11 @@ function renderAdmin(){
     <div class="admin-stat"><div class="admin-stat__n">${total}</div><div class="admin-stat__l">Total items</div></div>
     <div class="admin-stat"><div class="admin-stat__n">${published}</div><div class="admin-stat__l">Published</div></div>
     <div class="admin-stat"><div class="admin-stat__n">${drafts}</div><div class="admin-stat__l">Drafts</div></div>
-    <div class="admin-stat"><div class="admin-stat__n">${videos}</div><div class="admin-stat__l">Videos</div></div>
-  `;
+    <div class="admin-stat"><div class="admin-stat__n">${videos}</div><div class="admin-stat__l">Videos</div></div>`;
   const recent = state.content.slice().sort((a,b) => b.createdAt - a.createdAt).slice(0, 5);
   $('#recentActivity').innerHTML = recent.length
     ? recent.map(c => `<div class="admin-item"><div class="admin-item__info"><div class="admin-item__t">${esc(c.title)}</div><div class="admin-item__m">${esc(typeLabel(c.type))} · ${fmtDate(c.createdAt)}</div></div></div>`).join('')
     : `<div style="color:var(--muted);font-size:.85rem;text-align:center;padding:1.5rem 0">No activity yet.</div>`;
-
   const lib = state.content.slice().sort((a,b) => b.createdAt - a.createdAt);
   $('#libraryList').innerHTML = lib.length
     ? lib.map(c => `
@@ -1837,15 +1525,10 @@ function renderAdmin(){
           <div class="admin-item__m">${esc(typeLabel(c.type))} · ${esc(c.category)} · ${c.status}</div>
         </div>
         <div class="admin-item__actions">
-          <button class="admin-item__btn" data-toggle="${c.id}" title="Toggle status" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
-          </button>
-          <button class="admin-item__btn danger" data-del="${c.id}" title="Delete" type="button">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg>
-          </button>
+          <button class="admin-item__btn" data-toggle="${c.id}" type="button" title="Toggle status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></button>
+          <button class="admin-item__btn danger" data-del="${c.id}" type="button" title="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></button>
         </div>
-      </div>
-    `).join('')
+      </div>`).join('')
     : `<div style="color:var(--muted);font-size:.85rem;text-align:center;padding:1.5rem 0">No content yet.</div>`;
 
   $$('#libraryList [data-toggle]').forEach(b => b.addEventListener('click', () => {
@@ -1870,7 +1553,7 @@ $('#clearAllBtn').addEventListener('click', () => {
 });
 
 /* ============================================================
-   CREATE FORM + FILES
+   CREATE FORM
    ============================================================ */
 const dropzone = $('#dropzone');
 const fileInput = $('#fileInput');
@@ -1897,9 +1580,9 @@ function renderFileList(){
     const w = document.createElement('div');
     w.className = 'file-item';
     let inner = '';
-    if (f.type.startsWith('image/')) { inner = `<img src="${URL.createObjectURL(f)}" alt="">`; }
-    else if (f.type.startsWith('video/')) { inner = `<div style="width:100%;height:100%;display:grid;place-items:center;color:var(--muted);font-size:1.4rem">🎬</div>`; }
-    else { inner = `<div style="width:100%;height:100%;display:grid;place-items:center;color:var(--muted);font-size:1.4rem">🎧</div>`; }
+    if (f.type.startsWith('image/')) inner = `<img src="${URL.createObjectURL(f)}" alt="">`;
+    else if (f.type.startsWith('video/')) inner = `<div style="width:100%;height:100%;display:grid;place-items:center;color:var(--muted);font-size:1.4rem">🎬</div>`;
+    else inner = `<div style="width:100%;height:100%;display:grid;place-items:center;color:var(--muted);font-size:1.4rem">🎧</div>`;
     w.innerHTML = inner + `<button class="file-item__x" data-i="${i}" type="button">×</button>`;
     w.querySelector('button').addEventListener('click', () => { state.pendingFiles.splice(i,1); renderFileList(); });
     fileList.appendChild(w);
@@ -1923,22 +1606,14 @@ $('#createForm').addEventListener('submit', async e => {
 
   if (!image && state.pendingFiles.length) {
     const first = state.pendingFiles.find(f => f.type.startsWith('image/'));
-    if (first) {
-      image = await new Promise(res => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(first); });
-    }
+    if (first) image = await new Promise(res => { const r = new FileReader(); r.onload = () => res(r.result); r.readAsDataURL(first); });
   }
 
-  const item = {
+  state.content.unshift({
     id: uid(), type, category, title, desc,
-    fullArticle: full || desc,
-    image: image || '',
-    embed: embed || '',
-    tags, status,
-    featured: false,
-    createdAt: Date.now(),
-    likes: 0, views: 0
-  };
-  state.content.unshift(item);
+    fullArticle: full || desc, image: image || '', embed: embed || '',
+    tags, status, featured: false, createdAt: Date.now(), likes: 0, views: 0
+  });
   saveContent();
 
   state.pendingFiles = []; renderFileList();
@@ -1952,7 +1627,7 @@ $('#createForm').addEventListener('submit', async e => {
 });
 
 /* ============================================================
-   SOCIAL + SETTINGS SAVE
+   SOCIAL + SETTINGS
    ============================================================ */
 $('#saveSocial').addEventListener('click', () => {
   $$('#socialInputs input').forEach(inp => {
@@ -1999,7 +1674,6 @@ renderAll();
 revealInit();
 setTimeout(animateCounters, 300);
 
-// Debug helper
 console.log('%c KINETYC ', 'background:linear-gradient(135deg,#4EA8FF,#7C5CFF);color:#fff;padding:6px 14px;font-weight:700;letter-spacing:.15em;border-radius:6px');
 console.log('%c Loaded ' + state.content.length + ' items · ' +
   state.content.filter(c=>c.type==='article').length + ' articles · ' +
