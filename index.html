@@ -71,9 +71,6 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
 ::-webkit-scrollbar-track{background:var(--bg-2)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--primary),var(--primary-2));border-radius:6px}
 
-/* ============================================================
-   AURORA BACKGROUND
-   ============================================================ */
 .aurora{position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none;opacity:.9}
 .aurora__blob{position:absolute;border-radius:50%;filter:blur(100px);will-change:transform}
 .aurora__blob--1{width:70vw;height:70vw;background:var(--aurora-1);top:-25%;left:-15%;animation:auroraDrift 32s ease-in-out infinite}
@@ -86,8 +83,6 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
   50%{transform:translate(-4%,5%) scale(.95)}
   75%{transform:translate(4%,3%) scale(1.05)}
 }
-
-/* Grid overlay */
 .grid-overlay{position:fixed;inset:0;z-index:-2;pointer-events:none;
   background-image:
     linear-gradient(var(--grid-line) 1px,transparent 1px),
@@ -96,31 +91,20 @@ input,select,textarea{font:inherit;color:inherit;font-family:inherit}
   mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 78%);
   -webkit-mask-image:radial-gradient(ellipse at 50% 20%,#000 20%,transparent 78%);
 }
-
-/* Grain texture */
 body::after{
   content:"";position:fixed;inset:0;z-index:9000;pointer-events:none;
   opacity:.06;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
 }
-
-/* ============================================================
-   SCROLL PROGRESS
-   ============================================================ */
 .progress{position:fixed;top:0;left:0;height:2px;z-index:200;width:0%;
   background:linear-gradient(90deg,var(--primary),var(--primary-2),var(--accent));
   box-shadow:0 0 12px var(--primary);
   transition:width .1s linear;
 }
-
-/* ============================================================
-   LAYOUT
-   ============================================================ */
 .container{width:var(--container);margin-inline:auto}
 .section{padding:clamp(5rem,9vw,8.5rem) 0;position:relative}
 .grid{display:grid;gap:1.25rem}
 .grid-3{grid-template-columns:repeat(3,1fr)}
-
 .h-display{font-family:var(--font-display);font-weight:700;line-height:1;letter-spacing:-.04em}
 .h-1{font-size:clamp(2.6rem,7vw,6.2rem)}
 .h-2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-.035em;font-family:var(--font-display);line-height:1.05}
@@ -133,7 +117,6 @@ body::after{
 }
 .eyebrow::before{content:"";width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 10px var(--accent)}
 .lede{color:var(--muted);font-size:1.08rem;line-height:1.75;max-width:700px}
-
 .grad-text{
   background:linear-gradient(120deg,var(--primary) 0%,var(--primary-2) 40%,var(--primary-3) 70%,var(--accent) 100%);
   background-size:200% auto;
@@ -142,9 +125,6 @@ body::after{
 }
 @keyframes gradShift{0%,100%{background-position:0% center}50%{background-position:100% center}}
 
-/* ============================================================
-   BUTTONS
-   ============================================================ */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
   padding:1rem 1.7rem;
   font-family:var(--font-display);font-weight:600;font-size:.9rem;letter-spacing:-.005em;
@@ -176,8 +156,6 @@ body::after{
 .btn--ghost:hover{background:var(--surface);border-color:var(--border-2)}
 .btn--sm{padding:.65rem 1.1rem;font-size:.8rem;border-radius:11px}
 .btn--block{width:100%}
-
-/* YouTube button accent */
 .btn--youtube{
   background:linear-gradient(135deg,#FF0000,#C4302B);
   color:#fff;
@@ -189,9 +167,6 @@ body::after{
 }
 .btn--youtube svg{color:#fff}
 
-/* ============================================================
-   NAVBAR
-   ============================================================ */
 .navbar{
   position:sticky;top:0;z-index:80;
   background:color-mix(in srgb,var(--bg) 72%,transparent);
@@ -236,9 +211,6 @@ html[data-theme="dark"] .sun-icon{display:none}
 html[data-theme="light"] .moon-icon{display:none}
 .menu-btn{display:none}
 
-/* ============================================================
-   HERO
-   ============================================================ */
 .hero{position:relative;padding:clamp(3rem,6vw,5rem) 0 clamp(4rem,7vw,6rem);min-height:calc(100svh - 76px);display:flex;align-items:center;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;position:relative;z-index:2}
 .hero__badge{
@@ -316,9 +288,6 @@ html[data-theme="light"] .moon-icon{display:none}
 .scroll-hint__line::after{content:"";position:absolute;left:0;top:-48px;width:1px;height:48px;background:var(--primary);animation:scrollDot 2.2s var(--ease) infinite;box-shadow:0 0 8px var(--primary)}
 @keyframes scrollDot{0%{top:-48px}60%,100%{top:48px}}
 
-/* ============================================================
-   MARQUEE
-   ============================================================ */
 .marquee{
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
@@ -338,9 +307,6 @@ html[data-theme="light"] .moon-icon{display:none}
 .marquee__item em{font-style:normal;color:var(--primary);font-weight:600}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
-/* ============================================================
-   STATS
-   ============================================================ */
 .stats{
   display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
   background:var(--border);
@@ -370,9 +336,6 @@ html[data-theme="light"] .moon-icon{display:none}
 .sec-head__left{max-width:720px}
 .sec-head h2{margin:1rem 0 0}
 
-/* ============================================================
-   CARDS — futuristic
-   ============================================================ */
 .card{
   background:var(--surface);
   border:1px solid var(--border);
@@ -440,9 +403,6 @@ html[data-theme="light"] .moon-icon{display:none}
 .card__cta:hover{gap:.75rem}
 .card__cta svg{width:13px;height:13px}
 
-/* ============================================================
-   FILTER TABS
-   ============================================================ */
 .filter-bar{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-bottom:2.5rem}
 .tabs{
   display:inline-flex;align-items:center;gap:.4rem;
@@ -487,9 +447,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .search-inline input{background:transparent;border:0;outline:none;font-size:.9rem;width:100%;color:var(--text)}
 .search-inline input::placeholder{color:var(--muted-2)}
 
-/* ============================================================
-   TOPICS (BENTO)
-   ============================================================ */
 .topics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .topic{
   position:relative;padding:1.75rem 1.55rem;
@@ -546,9 +503,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .topic__tip-body{font-size:.88rem;line-height:1.7;color:var(--muted)}
 .topic:hover .topic__tip{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
 
-/* ============================================================
-   PROJECTS
-   ============================================================ */
 .project{
   background:var(--surface);border:1px solid var(--border);
   border-radius:var(--radius-lg);overflow:hidden;
@@ -584,9 +538,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 }
 .tech-tag:hover{border-color:var(--primary);color:var(--primary)}
 
-/* ============================================================
-   SOCIAL HEADER (enlarged)
-   ============================================================ */
 .social-head{text-align:center;max-width:920px;margin:0 auto clamp(3rem,6vw,5rem);position:relative}
 .social-head::before{
   content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
@@ -613,9 +564,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 }
 .social-head p b{color:var(--text);font-weight:600}
 
-/* ============================================================
-   SOCIAL GRID
-   ============================================================ */
 .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .soc{
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
@@ -656,9 +604,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .soc__arrow{color:var(--muted-2);flex-shrink:0;transition:.3s var(--ease);position:relative;z-index:1}
 .soc:hover .soc__arrow{color:var(--primary);transform:translate(3px,-3px)}
 
-/* ============================================================
-   CTA STRIP
-   ============================================================ */
 .cta-strip{
   position:relative;padding:clamp(3.5rem,7vw,6rem) clamp(1.8rem,4vw,4.5rem);
   border-radius:var(--radius-xl);
@@ -684,9 +629,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .cta-strip p{color:var(--muted);max-width:600px;margin:0 auto 2.2rem;font-size:1.02rem;line-height:1.75}
 .cta-actions{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap}
 
-/* ============================================================
-   ABOUT
-   ============================================================ */
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
 .about__img{
   position:relative;aspect-ratio:4/5;border-radius:var(--radius-xl);
@@ -709,10 +651,17 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .about__img-tag::before{content:"";width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 12px var(--accent)}
 .about__body p{color:var(--muted);font-size:1.02rem;line-height:1.85;margin-bottom:1.25rem}
 .about__body p b{color:var(--text);font-weight:600}
+.about__body .about__tagline{
+  display:block;
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(1.05rem,1.5vw,1.25rem);
+  letter-spacing:-.02em;line-height:1.5;
+  color:var(--text);
+  margin:1.75rem 0 1.75rem;
+  padding-left:1.2rem;
+  border-left:3px solid var(--primary);
+}
 
-/* ============================================================
-   CONTACT
-   ============================================================ */
 .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:start}
 .contact-info{
   padding:1.8rem;background:var(--surface);
@@ -756,9 +705,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 .form-card{padding:clamp(1.6rem,3vw,2.6rem);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);backdrop-filter:blur(20px)}
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
 .footer{background:var(--bg-2);border-top:1px solid var(--border);padding:clamp(3.5rem,7vw,6rem) 0 2rem;margin-top:4rem;position:relative;overflow:hidden}
 .footer::before{
   content:"";position:absolute;top:-200px;left:50%;transform:translateX(-50%);
@@ -782,9 +728,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .footer-bottom__links{display:flex;gap:1.4rem;flex-wrap:wrap}
 .footer-bottom__links a:hover{color:var(--primary)}
 
-/* ============================================================
-   MODAL
-   ============================================================ */
 .modal-overlay{
   position:fixed;inset:0;z-index:170;
   background:rgba(0,0,0,.8);backdrop-filter:blur(16px);
@@ -844,9 +787,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .modal__tag:hover{border-color:var(--primary);color:var(--primary)}
 .modal__actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--border)}
 
-/* ============================================================
-   DRAWER
-   ============================================================ */
 .drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);z-index:150;opacity:0;visibility:hidden;transition:.4s var(--ease)}
 .drawer-overlay.on{opacity:1;visibility:visible}
 .drawer{
@@ -916,9 +856,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .social-input input{padding:.65rem .9rem;background:var(--bg-2);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:.85rem;outline:none;font-family:var(--font-mono);transition:.25s var(--ease)}
 .social-input input:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--glow-primary)}
 
-/* ============================================================
-   SEARCH OVERLAY
-   ============================================================ */
 .search-overlay{position:fixed;inset:0;z-index:160;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(24px);opacity:0;visibility:hidden;transition:.4s var(--ease);padding:6rem 1.5rem 2rem;overflow-y:auto}
 .search-overlay.on{opacity:1;visibility:visible}
 .search-box{max-width:760px;margin:0 auto;transform:translateY(-16px);transition:transform .5s var(--ease)}
@@ -942,9 +879,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .search-result__title{font-family:var(--font-display);font-weight:600;font-size:.98rem;margin-bottom:.25rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .search-result__meta{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 
-/* ============================================================
-   TOAST
-   ============================================================ */
 .toast{
   position:fixed;bottom:1.9rem;left:50%;
   transform:translateX(-50%) translateY(120px);
@@ -958,9 +892,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .toast.on{transform:translateX(-50%) translateY(0);opacity:1}
 .toast.err{border-left-color:var(--warn);box-shadow:var(--shadow-lg),0 0 40px -12px var(--warn)}
 
-/* ============================================================
-   REVEAL
-   ============================================================ */
 .rv{opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
 .rv.on{opacity:1;transform:none}
 
@@ -971,9 +902,6 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 .empty-state__btn{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.25rem;background:var(--surface-2);border:1px solid var(--border-2);border-radius:12px;color:var(--text);font-family:var(--font-display);font-weight:500;font-size:.84rem;cursor:pointer;transition:.25s var(--ease)}
 .empty-state__btn:hover{border-color:var(--primary);background:var(--surface);box-shadow:0 8px 20px -8px var(--glow-primary)}
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 @media (max-width:1100px){
   .nav-links{display:none}
   .menu-btn{display:grid}
@@ -1084,7 +1012,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
         <p class="hero__desc">I'm Eric Kinetyc — <b>technology enthusiast</b>, creator and digital explorer sharing the things I discover, create and experience. From AI and to cosplay, swimming and everyday life.</p>
         <div class="hero__cta">
           <a href="#content" class="btn btn--primary"><span>Explore content</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="btn btn--youtube">
+          <a href="https://www.youtube.com/@EricKinetyc" target="_blank" rel="noopener noreferrer" class="btn btn--youtube">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5s-.2-1.6-1-2.3c-.9-1-1.9-1-2.4-1C16.6 4 12 4 12 4s-4.6 0-7.6.2c-.5 0-1.5 0-2.4 1-.8.7-1 2.3-1 2.3S1 9.4 1 11.3v1.7c0 1.9.2 3.8.2 3.8s.2 1.6 1 2.3c.9 1 2.1 1 2.6 1C6.9 20.2 12 20.2 12 20.2s4.6 0 7.6-.2c.5 0 1.5 0 2.4-1 .8-.7 1-2.3 1-2.3s.2-1.9.2-3.8v-1.7c0-1.9-.2-3.8-.2-3.8zM9.8 15.3V8.7l6.1 3.3-6.1 3.3z"/></svg>
             <span>Watch on YouTube</span>
           </a>
@@ -1139,8 +1067,10 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
       <div class="about__body rv" style="--d:.1s">
         <span class="eyebrow">About</span>
         <h2 class="h-2" style="margin:1.1rem 0 1.6rem">A creator at the intersection of <span class="grad-text">technology, creativity</span> and everyday life.</h2>
-        <p>I'm a Guyanese <b>technology enthusiast</b>, creator and digital explorer. My work moves between two worlds: the <b>technical</b> and the <b>expressive</b>. One day I'm writing about AI and cybersecurity, the next I'm in full cosplay armor on a competition stage, and the day after I'm underwater in a pool at sunrise.</p>
-        <p>KINETYC is where all of it lives. Not a niche. Not a single-topic brand. A living record of a creator in motion — <b>documenting the things I discover, create and experience</b>.</p>
+        <p>Welcome to <b>Eric Kinetyc</b> — a digital creator channel exploring the intersection of technology, creativity and everyday life. This is a constantly evolving space where technology meets personal expression, creativity meets experimentation, and everyday experiences become part of the story.</p>
+        <p>I'm Eric Kinetyc — <b>technology enthusiast</b>, digital content creator, educator, creative explorer and lifelong learner documenting the things I discover, create, test, experience and learn.</p>
+        <span class="about__tagline">Technology is what I explore. <br>Creativity is how I express myself. <br>Life is what I document.</span>
+        <p>Eric Kinetyc brings multiple interests together in one place. From artificial intelligence and emerging technology to cosplay, fitness, swimming, digital culture, creative projects and everyday experiences, <b>KINETYC</b> reflects the different sides of modern digital life.</p>
       </div>
     </div>
   </div>
@@ -1230,7 +1160,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
       <h2>Enjoy the content?</h2>
       <p>If you enjoy what I'm building, the easiest way to support is to follow, subscribe, like, comment and share. You can also support directly through PayPal.</p>
       <div class="cta-actions">
-        <a href="https://paypal.me/EricHodge347" target="_blank" rel="noopener" class="btn btn--primary"><span>Support via PayPal</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="https://paypal.me/EricHodge347" target="_blank" rel="noopener noreferrer" class="btn btn--primary"><span>Support via PayPal</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="#social" class="btn btn--glass"><span>Follow Eric Kinetyc</span></a>
       </div>
     </div>
@@ -1294,7 +1224,12 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
         <div class="footer-mini-socials" id="footerSocial"></div>
       </div>
       <div class="footer-col"><h5>Explore</h5><a href="#topics">Topics</a><a href="#content">Content</a><a href="#media">Media Library</a><a href="#projects">Projects</a></div>
-      <div class="footer-col"><h5>Connect</h5><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@kinetyc_xy" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/kinetyc_xy" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/kinetyc_xy" target="_blank" rel="noopener">X</a></div>
+      <div class="footer-col"><h5>Connect</h5>
+        <a href="https://www.youtube.com/@EricKinetyc" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@kinetyc_xy?_r=1&_t=ZP-99VsEcXiCAI" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/kinetyc_xy?igsh=MWNiZ3pqM3Q3bDFvaA==&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://x.com/kinetyc_xy?s=11" target="_blank" rel="noopener">X</a>
+      </div>
       <div class="footer-col"><h5>Also</h5><a href="#" id="openStudioLink">Creator Studio</a><a href="#contact">Contact</a><a href="https://paypal.me/EricHodge347" target="_blank" rel="noopener">Support</a><a href="#social">All platforms</a></div>
     </div>
     <div class="footer-bottom">
@@ -1397,10 +1332,15 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.4)
 'use strict';
 
 /* ============================================================
-   DATA
+   YOUTUBE CHANNEL — change this one line to update everywhere
+   ============================================================ */
+const YOUTUBE_URL = 'https://www.youtube.com/@EricKinetyc';
+
+/* ============================================================
+   DATA — all real social links
    ============================================================ */
 const SOCIALS_DEFAULT = [
-  { key:'youtube',   name:'YouTube',   handle:'Eric Kinetyc',  url:'https://www.youtube.com/',
+  { key:'youtube',   name:'YouTube',   handle:'Eric Kinetyc',  url:YOUTUBE_URL,
     svg:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5s-.2-1.6-1-2.3c-.9-1-1.9-1-2.4-1C16.6 4 12 4 12 4s-4.6 0-7.6.2c-.5 0-1.5 0-2.4 1-.8.7-1 2.3-1 2.3S1 9.4 1 11.3v1.7c0 1.9.2 3.8.2 3.8s.2 1.6 1 2.3c.9 1 2.1 1 2.6 1C6.9 20.2 12 20.2 12 20.2s4.6 0 7.6-.2c.5 0 1.5 0 2.4-1 .8-.7 1-2.3 1-2.3s.2-1.9.2-3.8v-1.7c0-1.9-.2-3.8-.2-3.8zM9.8 15.3V8.7l6.1 3.3-6.1 3.3z"/></svg>' },
   { key:'tiktok',    name:'TikTok',    handle:'@kinetyc_xy',   url:'https://www.tiktok.com/@kinetyc_xy?_r=1&_t=ZP-99VsEcXiCAI',
     svg:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.1 1.6 3.5 3.7 3.6v2.5c-1.3.1-2.5-.3-3.6-1v6.4c0 3.6-2.8 6.4-6.3 6.4-3.4 0-6.2-2.6-6.2-6 0-3.7 3.2-6.5 6.9-5.9v2.6c-.4-.1-.7-.2-1.1-.2-1.9 0-3.4 1.5-3.4 3.4 0 1.9 1.5 3.4 3.4 3.4 1.9 0 3.4-1.5 3.4-3.5V3h2.8z"/></svg>' },
@@ -1416,9 +1356,11 @@ const SOCIALS_DEFAULT = [
     svg:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v16H4zm3 4v8l4-4 3 3V8h2v10H8z"/></svg>' },
   { key:'threads',   name:'Threads',   handle:'@erichodge347', url:'https://www.threads.com/@erichodge347?igshid=NTc4MTIwNjQ2YQ==',
     svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21a9 9 0 1 1 8.5-6M12 21c4 0 7-2 7-5.5S16 12 13 12c-2 0-3.5 1-3.5 2.5S11 17 13 17c3 0 4-2 4-4.5S15 8 12 8a4 4 0 0 0-4 4"/></svg>' },
-  { key:'linkedin',  name:'LinkedIn',  handle:'Eric Hodge',    url:'https://www.linkedin.com/in/eric-hodge-769147427',
+  { key:'linkedin',  name:'LinkedIn',  handle:'Eric Hodge',    url:'https://www.linkedin.com/in/eric-hodge-769147427?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
     svg:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>' }
 ];
+
+/* PayPal shown separately under Support — not part of SOCIALS */
 
 const TOPICS = [
   { name:'AI', icon:'🤖', long:'Exploring artificial intelligence, emerging technologies, automation, generative AI, machine learning, AI tools, and the future of intelligent systems. Content includes experiments, tutorials, news, projects, and practical ways AI can be used in education, creativity, and everyday life.' },
@@ -1541,12 +1483,12 @@ const SEED_PROJECTS = [
    STATE
    ============================================================ */
 const LS_KEYS = {
-  content:'kinetyc_content_v9',
-  projects:'kinetyc_projects_v9',
-  socials:'kinetyc_socials_v9',
-  settings:'kinetyc_settings_v9',
-  theme:'kinetyc_theme_v9',
-  likes:'kinetyc_likes_v9'
+  content:'kinetyc_content_v10',
+  projects:'kinetyc_projects_v10',
+  socials:'kinetyc_socials_v10',
+  settings:'kinetyc_settings_v10',
+  theme:'kinetyc_theme_v10',
+  likes:'kinetyc_likes_v10'
 };
 
 const state = {
@@ -1640,17 +1582,17 @@ document.addEventListener('mouseout', e => {
 });
 
 /* ============================================================
-   SOCIALS
+   SOCIALS RENDER
    ============================================================ */
 function renderSocials(){
   $('#heroSocial').innerHTML = `<span class="hero__social-label">Follow</span>` +
-    state.socials.slice(0,6).map(s => `<a class="social-chip" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.name)}">${s.svg}</a>`).join('');
+    state.socials.slice(0,6).map(s => `<a class="social-chip" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.name)} — ${esc(s.handle)}">${s.svg}</a>`).join('');
   $('#socialGrid').innerHTML = state.socials.map(s => `
-    <a class="soc" href="${esc(s.url)}" target="_blank" rel="noopener">
+    <a class="soc" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">
       <div class="soc__left"><div class="soc__icon">${s.svg}</div><div><div class="soc__name">${esc(s.name)}</div><div class="soc__handle">${esc(s.handle)}</div></div></div>
       <span class="soc__arrow">↗</span>
     </a>`).join('');
-  $('#footerSocial').innerHTML = state.socials.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.name)}">${s.svg}</a>`).join('');
+  $('#footerSocial').innerHTML = state.socials.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" title="${esc(s.name)}">${s.svg}</a>`).join('');
   $('#socialInputs').innerHTML = state.socials.map(s => `
     <div class="social-input">
       <div class="social-input__label">${s.svg}<span>${esc(s.name)}</span></div>
@@ -1855,7 +1797,7 @@ function openModal(id){
     </div>
     <div class="modal__body">
       <span class="modal__eyebrow">${fmtDate(item.createdAt)} · ${item.views || 0} views · ${item.likes || 0} likes</span>
-      ${item.embed ? `<p style="margin-bottom:1.5rem"><a href="${esc(item.embed)}" target="_blank" rel="noopener" class="btn btn--glass btn--sm"><span>Open external media ↗</span></a></p>` : ''}
+      ${item.embed ? `<p style="margin-bottom:1.5rem"><a href="${esc(item.embed)}" target="_blank" rel="noopener noreferrer" class="btn btn--glass btn--sm"><span>Open external media ↗</span></a></p>` : ''}
       ${fullHTML}
       ${(item.tags && item.tags.length) ? `<div class="modal__tags">${item.tags.map(t => `<span class="modal__tag">#${esc(t)}</span>`).join('')}</div>` : ''}
       <div class="modal__actions">
@@ -2298,8 +2240,9 @@ revealInit();
 setTimeout(animateCounters, 400);
 
 console.log('%c KINETYC ', 'background:linear-gradient(135deg,#5EB0FF,#A78BFA,#22D3EE);color:#fff;padding:8px 16px;font-weight:700;letter-spacing:.2em;border-radius:8px;font-size:14px');
-console.log('%c YouTube button links to: https://www.youtube.com/', 'color:#FF0000;font-family:monospace;font-size:11px');
+console.log('%c YouTube channel: ' + YOUTUBE_URL, 'color:#FF0000;font-family:monospace;font-size:11px');
 console.log('%c Contact form → ' + OWNER_EMAIL, 'color:#5EB0FF;font-family:monospace;font-size:11px');
+console.log('%c All social links wired in — verify in Studio → Social tab', 'color:#4DFFC3;font-family:monospace;font-size:11px');
 </script>
 </body>
 </html>
