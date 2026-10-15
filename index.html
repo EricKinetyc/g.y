@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eric Kinetyc — Technology · Creativity · Life in Motion</title>
-<meta name="description" content="Eric Kinetyc — technology enthusiast, creator and digital explorer. AI, technology, web development, cosplay, fitness, swimming, education and digital culture.">
+<meta name="description" content="Eric Kinetyc — technology enthusiast, creator and digital explorer. AI, cybersecurity, web development, cosplay, fitness, swimming, education and digital culture.">
 <meta name="theme-color" content="#06070E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,12 +138,10 @@ html[data-theme="light"] .moon-icon{display:none}
 .floater-2{top:55%;right:-24px;animation-delay:-2s}
 .floater-3{bottom:12%;left:-42px;animation-delay:-1s}
 @keyframes floaty{0%{transform:translateY(0)}100%{transform:translateY(-10px)}}
-.scroll-hint{position:absolute;left:50%;bottom:1.15rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.65rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:#62b8ff;text-shadow:0 0 10px rgba(78,168,255,.55);z-index:4}
-.scroll-hint__line{width:92px;height:48px;position:relative;overflow:hidden;background:linear-gradient(90deg,transparent 0 8%,rgba(78,168,255,.22) 8% 9%,transparent 9% 24%,rgba(78,168,255,.18) 24% 25%,transparent 25% 76%,rgba(78,168,255,.18) 76% 77%,transparent 77% 91%,rgba(78,168,255,.22) 91% 92%,transparent 92%),linear-gradient(180deg,rgba(78,168,255,.15),transparent);border:1px solid rgba(78,168,255,.35);border-radius:5px;box-shadow:0 0 18px rgba(78,168,255,.16),inset 0 0 12px rgba(78,168,255,.08)}
-.scroll-hint__line::before{content:"";position:absolute;left:12px;right:12px;top:13px;height:1px;background:rgba(78,168,255,.55);box-shadow:0 11px 0 rgba(78,168,255,.22),0 22px 0 rgba(78,168,255,.18)}
-.scroll-hint__line::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;left:7px;top:6px;background:#4ea8ff;box-shadow:0 0 8px #4ea8ff,0 0 18px rgba(78,168,255,.9);animation:circuitPulse 2.2s linear infinite}
-.scroll-hint::before{content:"";position:absolute;bottom:8px;width:132px;height:1px;background:linear-gradient(90deg,transparent,#4ea8ff 20%,#4ea8ff 80%,transparent);box-shadow:0 0 10px rgba(78,168,255,.7);opacity:.7}
-@keyframes circuitPulse{0%{transform:translate(0,0);opacity:.2}12%{opacity:1}32%{transform:translate(24px,0)}42%{transform:translate(24px,11px)}62%{transform:translate(67px,11px)}74%{transform:translate(67px,22px)}92%{transform:translate(84px,22px);opacity:1}100%{transform:translate(84px,35px);opacity:0}}
+.scroll-hint{position:absolute;left:50%;bottom:1.5rem;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.6rem;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-2)}
+.scroll-hint__line{width:1px;height:44px;position:relative;overflow:hidden;background:linear-gradient(180deg,var(--border-2),transparent)}
+.scroll-hint__line::after{content:"";position:absolute;left:0;top:-44px;width:1px;height:44px;background:var(--primary);animation:scrollDot 2.2s var(--ease) infinite}
+@keyframes scrollDot{0%{top:-44px}60%,100%{top:44px}}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
 .stat{background:var(--surface);padding:1.6rem 1.4rem;backdrop-filter:blur(16px);transition:.3s var(--ease)}
@@ -155,6 +153,7 @@ html[data-theme="light"] .moon-icon{display:none}
 .sec-head__left{max-width:680px}
 .sec-head h2{margin:.85rem 0 0}
 
+/* ============ CARD ============ */
 .card{
   background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
   overflow:hidden;display:flex;flex-direction:column;
@@ -272,6 +271,45 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 .project__body p{color:var(--muted);font-size:.94rem;line-height:1.7;margin-bottom:1.5rem}
 .tech-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.6rem}
 .tech-tag{padding:.35rem .7rem;font-family:var(--font-mono);font-size:.68rem;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);border-radius:8px}
+
+/* ============ SOCIAL HEADER (enlarged) ============ */
+.social-head{
+  text-align:center;
+  max-width:900px;
+  margin:0 auto clamp(2.75rem,5.5vw,4.5rem);
+}
+.social-head .eyebrow{
+  font-size:.84rem;
+  letter-spacing:.28em;
+  padding:.7rem 1.5rem;
+  background:var(--surface);
+  border:1px solid var(--border-2);
+  border-radius:999px;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  margin-bottom:1.6rem;
+  box-shadow:0 6px 20px -8px var(--glow-primary);
+}
+.social-head .eyebrow::before{width:32px;height:1.5px}
+.social-head h2{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:clamp(2.4rem,5.6vw,4.4rem);
+  letter-spacing:-.04em;
+  line-height:1.02;
+  margin:0 0 1.5rem;
+  color:var(--text);
+}
+.social-head .grad-text{display:inline-block}
+.social-head p{
+  color:var(--muted);
+  font-size:clamp(1.02rem,1.5vw,1.22rem);
+  line-height:1.75;
+  max-width:680px;
+  margin:0 auto;
+  font-weight:400;
+}
+.social-head p b{color:var(--text);font-weight:600}
 
 .social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem}
 .soc{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);backdrop-filter:blur(14px);transition:.3s var(--ease);position:relative;overflow:hidden}
@@ -491,6 +529,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
   .topic__tip{width:min(300px,90vw)}
   .modal-overlay{padding:1rem}
   .modal__hint{display:none}
+  .social-head h2{font-size:clamp(2rem,8vw,2.6rem)}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
@@ -546,7 +585,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
           <span class="grad-text">Creativity.</span>
           <span>Life in motion.</span>
         </h1>
-        <p class="hero__desc">I'm Eric Kinetyc — <b>technology enthusiast</b>, creator and digital explorer sharing the things I discover, create and experience. From AI and technology to cosplay, swimming and everyday life.</p>
+        <p class="hero__desc">I'm Eric Kinetyc — <b>technology enthusiast</b>, creator and digital explorer sharing the things I discover, create and experience. From AI and to cosplay, swimming and everyday life.</p>
         <div class="hero__cta">
           <a href="#content" class="btn btn--primary">Explore content <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="btn btn--glass">Watch on YouTube</a>
@@ -592,8 +631,8 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       </div>
       <div class="about__body rv" style="--d:.1s">
         <span class="eyebrow">About</span>
-        <h2 class="h-2" style="margin:.85rem 0 1.4rem">A digital content creator promoting <span class="grad-text">technology, creativity</span> and everyday life.</h2>
-        <p>I'm a <b>technology enthusiast</b>, creator and digital explorer. My work moves between two worlds: the <b>technical</b> and the <b>expressive</b>. One day I'm writing about AI and technology, the next I'm in full cosplay armor on a competition stage, and the day after I'm underwater in a pool at sunrise.</p>
+        <h2 class="h-2" style="margin:.85rem 0 1.4rem">A creator at the intersection of <span class="grad-text">technology, creativity</span> and everyday life.</h2>
+        <p>I'm a Guyanese <b>technology enthusiast</b>, creator and digital explorer. My work moves between two worlds: the <b>technical</b> and the <b>expressive</b>. One day I'm writing about AI and cybersecurity, the next I'm in full cosplay armor on a competition stage, and the day after I'm underwater in a pool at sunrise.</p>
         <p>KINETYC is where all of it lives. Not a niche. Not a single-topic brand. A living record of a creator in motion — <b>documenting the things I discover, create and experience</b>.</p>
       </div>
     </div>
@@ -606,7 +645,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       <div class="sec-head__left">
         <span class="eyebrow">What I Explore</span>
         <h2 class="h-2">Content <span class="grad-text">pillars</span></h2>
-        <p class="lede" style="margin-top:1rem">Eight pillars that make up KINETYC.</p>
+        <p class="lede" style="margin-top:1rem">Eight pillars that make up KINETYC — hover any one to see what's inside.</p>
       </div>
     </div>
     <div class="topics-grid rv" id="topicsGrid"></div>
@@ -646,7 +685,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
       </div>
       <div class="search-inline">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input type="search" id="mediaSearch" placeholder="Search content, topics, projects…">
+        <input type="search" id="mediaSearch" placeholder="Search content…">
       </div>
     </div>
 
@@ -668,14 +707,12 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
 
 <section id="social" class="section">
   <div class="container">
-    <div class="sec-head rv">
-      <div class="sec-head__left">
-        <span class="eyebrow">Follow the Journey</span>
-        <h2 class="h-2">Eric Kinetyc <span class="grad-text">everywhere</span></h2>
-        <p class="lede" style="margin-top:1rem">Technology, creativity, cosplay, fitness and everyday life — follow KINETYC across the platforms.</p>
-      </div>
+    <div class="social-head rv">
+      <span class="eyebrow">Follow the Journey</span>
+      <h2>Eric Kinetyc <span class="grad-text">everywhere</span></h2>
+      <p>Technology, creativity, cosplay, fitness and everyday life — <b>follow KINETYC</b> across the platforms.</p>
     </div>
-    <div class="social-grid rv" id="socialGrid"></div>
+    <div class="social-grid rv" id="socialGrid" style="--d:.1s"></div>
   </div>
 </section>
 
@@ -746,7 +783,7 @@ html[data-theme="light"] .tab.active .tab__count{background:rgba(255,255,255,.35
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#top" class="brand"><span class="brand__mark"></span><span class="brand__text"><b>KINETYC</b><i>ERIC KINETYC</i></span></a>
-        <p>Technology. Creativity. Life in motion. The personal digital home of Eric Kinetyc — cosplay, AI, fitness, swimming and the everyday.</p>
+        <p>Technology. Creativity. Life in motion. The personal digital home of Eric Kinetyc — cosplay, AI, fitness, travel and the everyday.</p>
         <div class="footer-mini-socials" id="footerSocial"></div>
       </div>
       <div class="footer-col"><h5>Explore</h5><a href="#topics">Topics</a><a href="#content">Content</a><a href="#media">Media Library</a><a href="#projects">Projects</a></div>
@@ -878,7 +915,7 @@ const SOCIALS_DEFAULT = [
 
 const TOPICS = [
   { name:'AI', icon:'🤖', long:'Exploring artificial intelligence, emerging technologies, automation, generative AI, machine learning, AI tools, and the future of intelligent systems. Content includes experiments, tutorials, news, projects, and practical ways AI can be used in education, creativity, and everyday life.' },
-  { name:'Technology', icon:'⚡', long:'Exploring technology news, gadgets, apps, software, computers, smartphones, internet culture, emerging technologies, digital tools, and the rapidly changing technology landscape. Includes practical discoveries, reviews, explainers, news, experiments, and everyday technology.' },
+  { name:'Cybersecurity', icon:'🛡️', long:'Content focused on cybersecurity awareness, digital safety, networking, privacy, ethical security practices, cyber threats, and protecting personal and organizational information. Includes educational resources, security concepts, tools, and practical digital-safety guidance.' },
   { name:'Web Development', icon:'💻', long:'Exploring modern web technologies and digital development, including HTML, CSS, JavaScript, responsive design, UI/UX, web applications, databases, APIs, and emerging development tools. Showcasing projects, experiments, tutorials, and the process of building websites.' },
   { name:'Cosplay', icon:'🎭', long:'A creative space dedicated to cosplay, character design, costumes, makeup, props, photography, conventions, competitions, and creative transformation. Show behind-the-scenes development, finished looks, character concepts, and experiences from the cosplay community.' },
   { name:'Fitness', icon:'🏋️', long:'Content surrounding physical activity, exercise, movement, training routines, fitness goals, and maintaining an active lifestyle. The focus includes personal progress, workout experiences, challenges, and general fitness education.' },
@@ -1312,7 +1349,7 @@ function renderProjects(){
   const wrap = $('#projectsList');
   if (!state.projects.length) { wrap.innerHTML = ''; return; }
   wrap.innerHTML = state.projects.map(p => `
-    <article class="project" data-project-id="${p.id}">
+    <article class="project">
       <div class="project__media"><img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy"></div>
       <div class="project__body">
         <span class="project__status">${esc(p.status)}</span>
@@ -1419,54 +1456,35 @@ $('#searchInput').addEventListener('input', e => {
   const results = $('#searchResults');
   if (!q) { results.innerHTML = ''; $('#searchHint').style.display = ''; return; }
   $('#searchHint').style.display = 'none';
-  const contentHits = state.content
+  const hits = state.content
     .filter(c => c.status === 'published')
     .filter(c =>
       (c.title||'').toLowerCase().includes(q) ||
       (c.desc||'').toLowerCase().includes(q) ||
       (c.category||'').toLowerCase().includes(q) ||
-      (c.fullArticle||'').toLowerCase().includes(q) ||
       (c.tags||[]).some(t => t.toLowerCase().includes(q))
-    ).map(c => ({ kind:'content', id:c.id, title:c.title, meta:`${typeLabel(c.type)} · ${c.category}`, image:c.image }));
+    ).slice(0, 12);
 
-  const projectHits = SEED_PROJECTS
-    .filter(p => `${p.title} ${p.desc} ${(p.tech||[]).join(' ')}`.toLowerCase().includes(q))
-    .map(p => ({ kind:'project', id:p.id, title:p.title, meta:`Project · ${p.status}`, image:p.image }));
-
-  const topicHits = TOPICS
-    .filter(t => `${t.name} ${t.long}`.toLowerCase().includes(q))
-    .map(t => ({ kind:'topic', id:t.name, title:t.name, meta:'Content pillar', image:'' }));
-
-  const hits = [...contentHits, ...projectHits, ...topicHits].slice(0, 15);
-
-  if (!hits.length) { results.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--muted)">No results found. Try a topic, project, title, category or tag.</div>`; return; }
+  if (!hits.length) { results.innerHTML = `<div style="text-align:center;padding:2rem;color:var(--muted)">No results found.</div>`; return; }
   results.innerHTML = hits.map(h => `
-    <div class="search-result" data-kind="${h.kind}" data-target="${esc(h.id)}">
-      <div class="search-result__thumb">${h.image ? `<img src="${esc(h.image)}" alt="" loading="lazy">` : '<span style="display:grid;place-items:center;height:100%;font-size:1.3rem;color:var(--primary)">◆</span>'}</div>
+    <div class="search-result" data-target="${h.id}">
+      <div class="search-result__thumb"><img src="${esc(h.image||'')}" alt="" loading="lazy"></div>
       <div class="search-result__info">
         <div class="search-result__title">${esc(h.title)}</div>
-        <div class="search-result__meta">${esc(h.meta)}</div>
+        <div class="search-result__meta">${esc(typeLabel(h.type))} · ${esc(h.category)}</div>
       </div>
       <span style="color:var(--muted-2);font-size:1.1rem">→</span>
     </div>`).join('');
 
   $$('.search-result', results).forEach(r => r.addEventListener('click', () => {
-    const kind = r.dataset.kind;
     const id = r.dataset.target;
     closeSearch();
-    setTimeout(() => {
-      if (kind === 'content') openModal(id);
-      else if (kind === 'project') { const el = document.querySelector(`#projectsList [data-project-id="${CSS.escape(id)}"]`); if (el) el.scrollIntoView({behavior:'smooth',block:'center'}); else document.querySelector('#projects')?.scrollIntoView({behavior:'smooth'}); }
-      else { document.querySelector('#topics')?.scrollIntoView({behavior:'smooth'}); }
-    }, 180);
+    setTimeout(() => openModal(id), 180);
   }));
 });
 
 /* ============================================================
-   CONTACT — sends directly via FormSubmit.co (no email client opens)
-   First-time setup: FormSubmit will send a confirmation email to
-   erichodge978@gmail.com. Click the link once. After that, all
-   submissions land directly in the inbox.
+   CONTACT — FormSubmit.co (no email client opens)
    ============================================================ */
 const OWNER_EMAIL = 'erichodge978@gmail.com';
 
@@ -1488,7 +1506,6 @@ $('#contactForm').addEventListener('submit', async e => {
     return;
   }
 
-  // Disable button + show sending state
   const originalBtnHTML = btn.innerHTML;
   btn.disabled = true;
   btn.style.opacity = '.7';
